@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>U39 Area Fria Concept</title>
+  <meta name="theme-color" content="#07111b">
+  <meta name="description" content="Portal interativo de treinamento da área fria da U-39.">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="./icons/icon-192.png">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="U39 Area Fria Concept">
+  <link rel="stylesheet" href="./styles.css?v=16">
+</head>
+<body>
+  <section id="authView" class="view auth-shell hidden">
+    <div class="auth-card">
+      <div class="brand auth-brand">
+        <img src="./icons/icon-512.png" alt="U39 Area Fria Concept">
+        <div><h1>U39 Area Fria Concept</h1><p>Área de membro</p></div>
+      </div>
+      <div id="configWarning" class="warning hidden"></div>
+
+      <div class="auth-tabs">
+        <button id="tabLogin" class="tab active">Entrar</button>
+        <button id="tabRegister" class="tab">Cadastrar</button>
+      </div>
+
+      <div id="authForms">
+        <form id="loginForm" class="auth-form">
+          <label>Login<input id="loginUser" autocomplete="username" required placeholder="ex.: robson"></label>
+          <label>Senha<input id="loginPass" type="password" autocomplete="current-password" required></label>
+          <button class="btn primary" type="submit">Entrar</button>
+        </form>
+
+        <form id="registerForm" class="auth-form hidden">
+          <label>Nome<input id="regName" required placeholder="Seu nome"></label>
+          <label>Crie um login<input id="regUser" required placeholder="letras, números, ponto, _ ou -"></label>
+          <label>Crie uma senha<input id="regPass" type="password" required minlength="6"></label>
+          <button class="btn primary" type="submit">Criar minha conta</button>
+          <div class="hint">Após o cadastro, o acesso ficará <strong>pendente</strong> até a liberação remota pelo administrador.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="accessView" class="view auth-shell hidden">
+    <div class="auth-card access-gate-card">
+      <div class="brand auth-brand">
+        <img src="./icons/icon-512.png" alt="U39 Area Fria Concept">
+        <div><h1>U39 Area Fria Concept</h1><p>Controle de acesso</p></div>
+      </div>
+
+      <div class="access-gate-main">
+        <div id="accessStatusIcon" class="access-status-icon">⏳</div>
+        <span id="accessStatusBadge" class="access-badge pending">PENDENTE</span>
+        <h2 id="accessStatusTitle">Aguardando liberação do administrador</h2>
+        <p id="accessStatusMessage">Seu cadastro foi realizado. O administrador pode liberar seu acesso remotamente.</p>
+        <div class="member-waiting"><b id="accessMemberName"></b><small id="accessMemberLogin"></small></div>
+        <div class="access-actions">
+          <button id="checkAccessBtn" class="btn primary">↻ Verificar liberação</button>
+          <button id="accessLogoutBtn" class="btn">Sair</button>
+        </div>
+        <small id="accessAutoText" class="hint">Verificação automática a cada 15 segundos.</small>
+      </div>
+    </div>
+  </section>
+
+  <section id="appView" class="view app-shell hidden">
+    <header class="topbar">
+      <div id="brandTap" class="brand" title="U39 Area Fria Concept">
+        <img src="./icons/icon-192.png" alt="U39 Area Fria Concept">
+        <div><h1>U39 Area Fria Concept</h1><p>Treinamento interativo — Área Fria</p></div>
+      </div>
+
+      <div class="top-actions">
+        <div class="member-pill"><b id="memberName"></b><small id="memberLogin"></small></div>
+        <button id="installBtn" class="install-btn">📲 Instalar app</button>
+        <button id="logoutBtn" class="icon-btn">Sair</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="panel hero-brand-panel">
+          <div class="hero-brand-copy">
+            <span class="hero-kicker">U39 AREA FRIA CONCEPT</span>
+            <h2>Treinamento integrado da Área Fria</h2>
+            <p>Todas as one pages ficam reunidas em um único ambiente. Escolha um módulo livremente ou siga a sequência operacional usando os botões Anterior e Próximo.</p>
+            <div style="margin-top:16px"><button id="continueBtn" class="btn primary">▶ Continuar de onde parei</button></div>
+          </div>
+          <div class="hero-brand-art">
+            <img src="./icons/icon-512.png" alt="Ícone U39 Area Fria Concept">
+          </div>
+        </div>
+        <div class="panel progress-card">
+          <b>Meu progresso</b>
+          <div class="progress-track"><i id="progressBar"></i></div>
+          <span id="progressText">0 de 11 módulos concluídos — 0%</span>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="section-head">
+          <div><h3>Equipamentos e processos</h3><p>Abra qualquer módulo no visualizador integrado.</p></div>
+          <input id="search" class="search" placeholder="Buscar equipamento ou processo...">
+        </div>
+        <div id="moduleGrid" class="module-grid"></div>
+      </section>
+
+      <section class="panel">
+        <div class="section-head"><div><h3>Sequência de treinamento</h3><p>Fluxo sugerido para navegar por todos os módulos.</p></div></div>
+        <div id="processFlow" class="process-flow"></div>
+      </section>
+
+      <footer class="brand-footer">
+        <img src="./icons/icon-192.png" alt="">
+        <div>
+          <b>U39 Area Fria Concept</b>
+          <small>Portal integrado de treinamento e consulta operacional</small>
+        </div>
+      </footer>
+    </main>
+  </section>
+
+  <section id="viewer" class="viewer hidden">
+    <div class="viewer-head">
+      <button id="homeBtn" class="btn">⌂ Início</button>
+      <h3 id="viewerTitle">Módulo</h3>
+      <button id="openExternal" class="btn">↗ Abrir separado</button>
+      <button id="viewerClose" class="btn">✕</button>
+    </div>
+    <iframe id="moduleFrame" title="One page interativa"></iframe>
+    <div class="viewer-foot">
+      <button id="prevBtn" class="btn">← Anterior</button>
+      <button id="viewerEditBtn" class="btn viewer-edit-btn">✏️ Modo edição</button>
+      <button id="resetLampsBtn" class="btn viewer-reset-btn">↺ Restaurar lâmpadas</button>
+      <button id="saveTextDraftBtn" class="btn viewer-edit-btn">💾 Salvar texto</button>
+      <button id="syncOfficialBtn" class="btn viewer-official-btn">🔄 Sincronizar</button>
+      <button id="useOfficialBtn" class="btn viewer-official-btn">↩ Versão oficial</button>
+      <button id="publishOfficialBtn" class="btn viewer-publish-btn hidden">🌐 Publicar edição</button>
+      <button id="publishLampsBtn" class="btn viewer-publish-btn hidden">🌐 Publicar lâmpadas</button>
+      <button id="favoriteBtn" class="btn">☆ Favoritar</button>
+      <button id="completeBtn" class="btn primary">Marcar como concluído</button>
+      <button id="nextBtn" class="btn">Próximo →</button>
+    </div>
+  </section>
+
+
+  <section id="adminLoginModal" class="admin-modal hidden">
+    <div class="admin-card admin-login-card">
+      <div class="admin-head">
+        <div>
+          <h3>Acesso administrativo</h3>
+          <small>Área restrita do U39 Area Fria Concept.</small>
+        </div>
+        <button id="adminLoginClose" class="btn">Fechar</button>
+      </div>
+
+      <form id="adminLoginForm" class="auth-form" style="margin-top:16px">
+        <label>Login administrativo
+          <input id="adminLoginUser" value="admin" autocomplete="username" readonly>
+        </label>
+        <label>Senha
+          <input id="adminLoginPass" type="password" autocomplete="current-password" required>
+        </label>
+        <button class="btn primary" type="submit">Entrar na administração</button>
+        <div class="hint">O login administrativo é <strong>admin</strong>. A senha não fica gravada no código-fonte.</div>
+      </form>
+    </div>
+  </section>
+
+  <section id="adminModal" class="admin-modal hidden">
+    <div class="admin-card">
+      <div class="admin-head">
+        <div><h3>Administração — Liberação de acessos</h3><small>Libere ou bloqueie usuários remotamente e acompanhe as sessões.</small></div>
+        <div><button id="adminRefresh" class="btn">Atualizar</button> <button id="adminClose" class="btn">Fechar</button></div>
+      </div>
+      <div id="adminStats" class="admin-stats"></div>
+      <div id="adminBody"></div>
+    </div>
+  </section>
+
+  <div id="toast" class="toast">OK</div>
+
+  <script>
+  (async function () {
+    const BUILD = '16';
+    const BUILD_KEY = 'u39-area-fria-build';
+
+    if (localStorage.getItem(BUILD_KEY) !== BUILD) {
+      localStorage.setItem(BUILD_KEY, BUILD);
+
+      try {
+        if ('serviceWorker' in navigator) {
+          const regs = await navigator.serviceWorker.getRegistrations();
+          await Promise.all(regs.map(r => r.unregister()));
+        }
+
+        if ('caches' in window) {
+          const keys = await caches.keys();
+          await Promise.all(keys.map(k => caches.delete(k)));
+        }
+      } catch (e) {
+        console.warn('Limpeza de cache:', e);
+      }
+
+      const u = new URL(window.location.href);
+      u.searchParams.set('v', BUILD);
+      window.location.replace(u.toString());
+      return;
+    }
+
+    const appScript = document.createElement('script');
+    appScript.type = 'module';
+    appScript.src = './app.js?v=16';
+    document.body.appendChild(appScript);
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js?v=16').catch(console.warn);
+      });
+    }
+  })();
+  </script>
+
+</body>
+</html>
