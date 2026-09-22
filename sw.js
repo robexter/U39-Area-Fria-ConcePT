@@ -1,11 +1,12 @@
-const CACHE='u39-area-fria-concept-v18';
+const CACHE='u39-area-fria-concept-v19';
 
 const SHELL=[
   './',
   './index.html',
-  './styles.css?v=18',
-  './app.js?v=18',
+  './styles.css?v=19',
+  './app.js?v=19',
   './manifest.json',
+  './equalizacao-j3902-e3907.html?v=19',
   './icons/icon-192.png',
   './icons/icon-512.png',
   './icons/icon-maskable-192.png',
@@ -31,7 +32,6 @@ self.addEventListener('fetch', event => {
 
   const url = new URL(event.request.url);
 
-  // Recursos externos (Supabase CDN e one pages) ficam a cargo da rede.
   if (url.origin !== self.location.origin) return;
 
   event.respondWith(

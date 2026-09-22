@@ -12,7 +12,7 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="U39 Area Fria Concept">
-  <link rel="stylesheet" href="./styles.css?v=18">
+  <link rel="stylesheet" href="./styles.css?v=19">
 </head>
 <body>
   <section id="authView" class="view auth-shell hidden">
@@ -45,7 +45,6 @@
       </div>
     </div>
   </section>
-
 
   <section id="accessView" class="view auth-shell hidden">
     <div class="auth-card access-gate-card">
@@ -111,6 +110,25 @@
         <div id="moduleGrid" class="module-grid"></div>
       </section>
 
+      <section class="panel" id="integratedManeuvers">
+        <div class="section-head">
+          <div>
+            <h3>🔄 Manobras integradas</h3>
+            <p>Treinamentos situacionais que envolvem mais de um equipamento da Área Fria.</p>
+          </div>
+        </div>
+        <div style="padding:0 18px 18px">
+          <div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center;padding:16px;border:1px solid #365a73;border-radius:16px;background:linear-gradient(180deg,#0d2637,#091923)">
+            <div>
+              <div style="font-size:11px;font-weight:900;letter-spacing:.08em;color:#ffd56b;margin-bottom:5px">MANOBRA INTEGRADA • J-3902 / E-3904 / E-3905 / E-3907 / FLARE</div>
+              <b style="font-size:18px">Equalização de Pressão J-3902 → E-3907 / Flare</b>
+              <p style="margin:6px 0 0;color:#9fb7c8;line-height:1.45">Estudo guiado, montagem do alinhamento, tendências das pressões, falhas e avaliação CIC.</p>
+            </div>
+            <a class="btn primary" href="./equalizacao-j3902-e3907.html?v=19" style="text-decoration:none;white-space:nowrap">▶ Abrir treinamento</a>
+          </div>
+        </div>
+      </section>
+
       <section class="panel">
         <div class="section-head"><div><h3>Sequência de treinamento</h3><p>Fluxo sugerido para navegar por todos os módulos.</p></div></div>
         <div id="processFlow" class="process-flow"></div>
@@ -148,7 +166,6 @@
       <button id="nextBtn" class="btn">Próximo →</button>
     </div>
   </section>
-
 
   <section id="adminLoginModal" class="admin-modal hidden">
     <div class="admin-card admin-login-card">
@@ -188,7 +205,7 @@
 
   <script>
   (async function () {
-    const BUILD = '18';
+    const BUILD = '19';
     const BUILD_KEY = 'u39-area-fria-build';
 
     if (localStorage.getItem(BUILD_KEY) !== BUILD) {
@@ -216,16 +233,15 @@
 
     const appScript = document.createElement('script');
     appScript.type = 'module';
-    appScript.src = './app.js?v=18';
+    appScript.src = './app.js?v=19';
     document.body.appendChild(appScript);
 
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js?v=18').catch(console.warn);
+        navigator.serviceWorker.register('./sw.js?v=19').catch(console.warn);
       });
     }
   })();
   </script>
-
 </body>
 </html>
