@@ -1,0 +1,20 @@
+U39 ÁREA FRIA CONCEPT — V26
+REFINAMENTO DA PARADA U-39 FO-39143 / CI-3907
+
+Principais melhorias:
+- 22 etapas preservadas, agrupadas em 7 macrofases;
+- nova Matriz de Estado da Unidade;
+- cenários passam a exigir DECISÃO + CONFIRMAÇÃO;
+- alternativas embaralhadas;
+- avaliação final sem sequência exposta;
+- maior separação entre comando CIC e confirmação de campo;
+- foco em dependências de carga, pressão, intertravamentos e inventários;
+- valores/tags do procedimento preservados.
+
+Atualização:
+substituir index.html
+substituir sw.js
+substituir parada-u39-fo39143-ci3907.html
+
+Abrir:
+https://robexter.github.io/U39-Area-Fria-ConcePT/?v=26

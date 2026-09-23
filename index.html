@@ -12,7 +12,7 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="U39 Area Fria Concept">
-  <link rel="stylesheet" href="./styles.css?v=24">
+  <link rel="stylesheet" href="./styles.css?v=26">
 </head>
 <body>
   <section id="authView" class="view auth-shell hidden">
@@ -124,7 +124,7 @@
               <b style="font-size:18px">Equalização de Pressão J-3902 → E-3907 / Flare</b>
               <p style="margin:6px 0 0;color:#9fb7c8;line-height:1.45">Estudo guiado, montagem do alinhamento, tendências das pressões, falhas e avaliação CIC.</p>
             </div>
-            <a class="btn primary" href="./equalizacao-j3902-e3907.html?v=24" style="text-decoration:none;white-space:nowrap">▶ Abrir treinamento</a>
+            <a class="btn primary" href="./equalizacao-j3902-e3907.html?v=26" style="text-decoration:none;white-space:nowrap">▶ Abrir treinamento</a>
           </div>
           <div style="height:12px"></div>
           <div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center;padding:16px;border:1px solid #685b32;border-radius:16px;background:linear-gradient(180deg,#252416,#111b21)">
@@ -142,7 +142,16 @@
               <b style="font-size:18px">Parada e Esgotamento do Tratamento DEA da U-39 • 100%</b>
               <p style="margin:6px 0 0;color:#9fb7c8;line-height:1.45">15/15 etapas: regeneração, flare, drenagens, lavagem/V12, raqueteamento, segurança, registros e liberação.</p>
             </div>
-            <a class="btn primary" href="./parada-esgotamento-dea-u39.html?v=24" style="text-decoration:none;white-space:nowrap">🧪 Treinar manobra</a>
+            <a class="btn primary" href="./parada-esgotamento-dea-u39.html?v=26" style="text-decoration:none;white-space:nowrap">🧪 Treinar manobra</a>
+          </div>
+          <div style="height:12px"></div>
+          <div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center;padding:16px;border:1px solid #714b35;border-radius:16px;background:linear-gradient(180deg,#2a1b14,#111921)">
+            <div>
+              <div style="font-size:11px;font-weight:900;letter-spacing:.08em;color:#ffc187;margin-bottom:5px">🛑 PARADA TOTAL • U-39 • FO-39143 / CI-3907</div>
+              <b style="font-size:18px">Parada da U-39 para Reparo • Treinamento CIC</b>
+              <p style="margin:6px 0 0;color:#9fb7c8;line-height:1.45">V26 refinada • 7 macrofases • decisão + confirmação • 22 etapas preservadas.</p>
+            </div>
+            <a class="btn primary" href="./parada-u39-fo39143-ci3907.html?v=26" style="text-decoration:none;white-space:nowrap">🛑 Treinar parada</a>
           </div>
         </div>
       </section>
@@ -223,7 +232,7 @@
 
   <script>
   (async function () {
-    const BUILD = '24';
+    const BUILD = '26';
     const BUILD_KEY = 'u39-area-fria-build';
 
     if (localStorage.getItem(BUILD_KEY) !== BUILD) {
@@ -251,12 +260,12 @@
 
     const appScript = document.createElement('script');
     appScript.type = 'module';
-    appScript.src = './app.js?v=24';
+    appScript.src = './app.js?v=26';
     document.body.appendChild(appScript);
 
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js?v=24').catch(console.warn);
+        navigator.serviceWorker.register('./sw.js?v=26').catch(console.warn);
       });
     }
   })();
