@@ -12,7 +12,7 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="U39 Area Fria Concept">
-  <link rel="stylesheet" href="./styles.css?v=19">
+  <link rel="stylesheet" href="./styles.css?v=24">
 </head>
 <body>
   <section id="authView" class="view auth-shell hidden">
@@ -124,7 +124,25 @@
               <b style="font-size:18px">Equalização de Pressão J-3902 → E-3907 / Flare</b>
               <p style="margin:6px 0 0;color:#9fb7c8;line-height:1.45">Estudo guiado, montagem do alinhamento, tendências das pressões, falhas e avaliação CIC.</p>
             </div>
-            <a class="btn primary" href="./equalizacao-j3902-e3907.html?v=19" style="text-decoration:none;white-space:nowrap">▶ Abrir treinamento</a>
+            <a class="btn primary" href="./equalizacao-j3902-e3907.html?v=24" style="text-decoration:none;white-space:nowrap">▶ Abrir treinamento</a>
+          </div>
+          <div style="height:12px"></div>
+          <div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center;padding:16px;border:1px solid #685b32;border-radius:16px;background:linear-gradient(180deg,#252416,#111b21)">
+            <div>
+              <div style="font-size:11px;font-weight:900;letter-spacing:.08em;color:#ffd56b;margin-bottom:5px">🛠️ MANUTENÇÃO • E-3906 • ATALHO SECUNDÁRIO</div>
+              <b style="font-size:18px">Retirada da E-3906 de Operação para Manutenção</b>
+              <p style="margin:6px 0 0;color:#9fb7c8;line-height:1.45">Bypass → isolamento → drenagem → flare → purga → steam-out → medições → liberação.</p>
+            </div>
+            <a class="btn primary" href="https://robexter.github.io/E-3906-concept/retirada-e3906.html?v=4" target="_blank" rel="noopener" style="text-decoration:none;white-space:nowrap">🛠️ Abrir treinamento</a>
+          </div>
+          <div style="height:12px"></div>
+          <div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center;padding:16px;border:1px solid #536b44;border-radius:16px;background:linear-gradient(180deg,#17281b,#0d1a16)">
+            <div>
+              <div style="font-size:11px;font-weight:900;letter-spacing:.08em;color:#bce88f;margin-bottom:5px">🧪 MANOBRA INTEGRADA • TRATAMENTO DEA • E-3911 / E-3912 / E-3913</div>
+              <b style="font-size:18px">Parada e Esgotamento do Tratamento DEA da U-39 • 100%</b>
+              <p style="margin:6px 0 0;color:#9fb7c8;line-height:1.45">15/15 etapas: regeneração, flare, drenagens, lavagem/V12, raqueteamento, segurança, registros e liberação.</p>
+            </div>
+            <a class="btn primary" href="./parada-esgotamento-dea-u39.html?v=24" style="text-decoration:none;white-space:nowrap">🧪 Treinar manobra</a>
           </div>
         </div>
       </section>
@@ -205,7 +223,7 @@
 
   <script>
   (async function () {
-    const BUILD = '19';
+    const BUILD = '24';
     const BUILD_KEY = 'u39-area-fria-build';
 
     if (localStorage.getItem(BUILD_KEY) !== BUILD) {
@@ -233,12 +251,12 @@
 
     const appScript = document.createElement('script');
     appScript.type = 'module';
-    appScript.src = './app.js?v=19';
+    appScript.src = './app.js?v=24';
     document.body.appendChild(appScript);
 
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js?v=19').catch(console.warn);
+        navigator.serviceWorker.register('./sw.js?v=24').catch(console.warn);
       });
     }
   })();

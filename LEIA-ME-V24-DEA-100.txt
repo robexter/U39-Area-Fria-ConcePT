@@ -1,0 +1,34 @@
+U39 ÁREA FRIA CONCEPT — V24
+PARADA E ESGOTAMENTO DO TRATAMENTO DEA DA U-39 — CONVERSÃO 100%
+
+Cobertura:
+- páginas 1–12 do PE.REF.OPE.CCF.049 Rev. 01;
+- controle de revisões;
+- objetivo, referências, abrangência, responsabilidades e definições;
+- 5.2.1.1 até 5.2.1.15;
+- 5.2.1.7 A–G;
+- todos os pontos de vent/dreno de 5.2.1.13;
+- lavagem, V12, resfriamento, retrolavagem e entrega de linhas de 5.2.1.14;
+- teste H2S/explosividade e todos os pontos de figura 8 de 5.2.1.15;
+- itens críticos de verificação;
+- recursos/indicadores N/A;
+- tratamento de anomalias, adequação, avaliação/melhoria;
+- controle de registros e anexos.
+
+Treinamento:
+1. Jornada 15 etapas
+2. Esgotamento A–G
+3. Vents/drenos
+4. Lavagem/V12
+5. Raqueteamento
+6. CIC × Campo / Segurança
+7. Avaliação 100%
+8. Documento / matriz de cobertura
+
+Arquivos para o GitHub U39-Area-Fria-ConcePT:
+- substituir index.html
+- substituir sw.js
+- substituir parada-esgotamento-dea-u39.html
+
+Abrir após publicar:
+https://robexter.github.io/U39-Area-Fria-ConcePT/?v=24

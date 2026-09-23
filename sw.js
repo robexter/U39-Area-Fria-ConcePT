@@ -1,12 +1,13 @@
-const CACHE='u39-area-fria-concept-v19';
+const CACHE='u39-area-fria-concept-v24-dea-completo';
 
 const SHELL=[
   './',
   './index.html',
-  './styles.css?v=19',
-  './app.js?v=19',
+  './styles.css?v=24',
+  './app.js?v=24',
   './manifest.json',
-  './equalizacao-j3902-e3907.html?v=19',
+  './equalizacao-j3902-e3907.html?v=24',
+  './parada-esgotamento-dea-u39.html?v=24',
   './icons/icon-192.png',
   './icons/icon-512.png',
   './icons/icon-maskable-192.png',
@@ -29,9 +30,7 @@ self.addEventListener('activate', event => {
 
 self.addEventListener('fetch', event => {
   if (event.request.method !== 'GET') return;
-
   const url = new URL(event.request.url);
-
   if (url.origin !== self.location.origin) return;
 
   event.respondWith(

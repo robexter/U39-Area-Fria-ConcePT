@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#071018">
+<title>Parada e Esgotamento DEA U-39 • V24 Completo</title>
+<style>
+:root{--bg:#06111b;--panel:#0c1c29;--panel2:#11293a;--line:#31536a;--txt:#eef7ff;--muted:#9eb4c5;--blue:#69c9ff;--green:#8dde8a;--lime:#b7e986;--yellow:#ffd267;--red:#ff9696}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(circle at top,#17364a,#07131e 45%,#04090e);color:var(--txt)}body{padding:8px}
+.app{max-width:1480px;margin:auto;display:grid;gap:12px}.card{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:22px;box-shadow:0 14px 36px #0006}
+.hero{padding:18px;display:grid;grid-template-columns:1.2fr .8fr;gap:14px}.kicker{display:inline-flex;border:1px solid #557844;background:#132817;color:#d9ffc0;border-radius:999px;padding:6px 10px;font-size:10px;font-weight:900;letter-spacing:.08em}
+h1{font-size:clamp(27px,4vw,42px);margin:8px 0 7px}.hero p{margin:0;color:var(--muted);line-height:1.5}.hero-side{border:1px solid #355a73;background:#081923;border-radius:17px;padding:13px}
+.memory{font-size:clamp(15px,2vw,21px);font-weight:950;line-height:1.55}.memory span{color:var(--lime)}.navback{display:inline-flex;text-decoration:none;color:#fff;border:1px solid #3b6078;background:#102838;border-radius:11px;padding:8px 10px;font-weight:850;margin-top:12px}
+.tabs{display:flex;gap:7px;flex-wrap:wrap;padding:11px;border-bottom:1px solid var(--line);position:sticky;top:0;background:#091923f2;backdrop-filter:blur(8px);z-index:5}.tab{border:1px solid #365970;background:#0b2230;color:#e7f4ff;border-radius:12px;padding:9px 11px;font-weight:850;cursor:pointer}.tab.active{background:#245435;border-color:#7bd47c}
+.view{display:none;padding:14px}.view.active{display:block}.grid2{display:grid;grid-template-columns:1.05fr .95fr;gap:12px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.box{border:1px solid #315169;background:#081923;border-radius:17px;padding:14px}.box h2,.box h3{margin:0 0 8px}.box p,.box li{line-height:1.5}.subtle{color:var(--muted);font-size:12px}.phase{font-size:10px;color:#a9dfbe;font-weight:900;letter-spacing:.09em;margin-bottom:5px}
+.btn{border:1px solid #3b6079;background:#102838;color:#fff;border-radius:11px;padding:9px 11px;font-weight:850;cursor:pointer;text-align:left}.btn.primary{background:#205f34;border-color:#5fa36d}.btn:disabled{opacity:.45;cursor:not-allowed}
+.coverage{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}.cov{border:1px solid #31536a;background:#071824;border-radius:13px;padding:9px;text-align:center}.cov b{display:block;font-size:22px}.cov small{color:var(--muted)}
+.stepnav{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin:10px 0}.stepbtn{border:1px solid #31536a;background:#071824;color:#fff;border-radius:11px;padding:8px;font-weight:900;cursor:pointer}.stepbtn.active{border-color:#83d587;background:#17351f}.stepbtn.done{box-shadow:inset 0 0 0 1px #4e925e}
+.stepcard{border:1px solid #3b6078;background:#071924;border-radius:16px;padding:14px}.stepcard h2{margin:4px 0 6px}.actionlist{display:grid;gap:6px;margin:10px 0}.action{border:1px solid #2e4e63;background:#06141e;border-radius:11px;padding:9px;display:grid;grid-template-columns:auto 1fr;gap:9px;align-items:start}.action input{margin-top:3px;transform:scale(1.15)}.action.checked{border-color:#4f8c5a;background:#0d2716}
+.gate{border:1px solid #655727;background:#211e0f;border-radius:13px;padding:11px;margin-top:10px}.gate strong{color:#ffe0a0}.feedback{display:none;margin-top:10px;border-radius:11px;padding:10px;line-height:1.45}.feedback.show{display:block}.feedback.yes{border:1px solid #4a9159;background:#12351c}.feedback.no{border:1px solid #944848;background:#381717}
+.routegrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.route{border:1px solid #31536a;background:#071824;border-radius:13px;padding:10px}.route b{display:block}.route small{color:var(--muted)}
+.detailgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.detail{border:1px solid #31536a;background:#071824;border-radius:13px;padding:10px}.detail h4{margin:0 0 7px}.detail ul{padding-left:18px;font-size:12px}.detail li{margin:5px 0}
+.assess{border:1px solid #315169;background:#081923;border-radius:15px;padding:13px;margin:10px 0}.assess h3{margin:0 0 7px}.assess button{display:block;width:100%;margin-top:6px}.assess .result{display:none;margin-top:8px;padding:9px;border-radius:10px}.assess.answered .result{display:block}.assess.correct .result{background:#12351c;border:1px solid #428a55}.assess.incorrect .result{background:#351718;border:1px solid #8f4949}
+.rolegrid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.role{border:1px solid #31536a;background:#071824;border-radius:14px;padding:11px}.critical{border:1px solid #705a28;background:#201c0d;border-radius:13px;padding:10px;margin:7px 0}.critical b{color:#ffe0a0}
+.docsec{border:1px solid #31536a;background:#071824;border-radius:14px;padding:12px;margin:8px 0}.docsec h3{margin:0 0 7px}.docsec ul{padding-left:20px}
+.scorebar{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;position:sticky;bottom:6px;background:#07131ee8;padding:7px;border-radius:14px;border:1px solid #31536a}.scorebar div{text-align:center;border:1px solid #2f4c60;background:#06131b;border-radius:10px;padding:7px}.scorebar b{display:block;font-size:19px}
+.note{border:1px solid #685a26;background:#241f0d;color:#ffebaa;border-radius:12px;padding:10px;font-size:12px;line-height:1.45;margin-top:11px}
+@media(max-width:1050px){.stepnav{grid-template-columns:repeat(3,1fr)}.detailgrid{grid-template-columns:1fr 1fr}.coverage{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:900px){.hero,.grid2,.rolegrid{grid-template-columns:1fr}.grid3,.routegrid{grid-template-columns:1fr}}
+@media(max-width:620px){body{padding:4px}.view{padding:8px}.stepnav,.detailgrid,.coverage,.scorebar{grid-template-columns:1fr}.tab{font-size:11px}}
+</style>
+</head>
+<body>
+<div class="app">
+<section class="card hero">
+<div>
+<span class="kicker">🧪 V24 • PROCEDIMENTO 100% CONVERTIDO • CIC</span>
+<h1>Parada e Esgotamento do Tratamento DEA da U-39</h1>
+<p>Conversão completa do PE.REF.OPE.CCF.049 Rev. 01 para treinamento interativo. O foco continua sendo operador de controle: estado → interpretação → decisão → confirmação → avanço, sem retirar os detalhes de campo do procedimento.</p>
+<a class="navback" href="./index.html?v=24#integratedManeuvers">← Área Fria Concept</a>
+</div>
+<div class="hero-side">
+<b>Cobertura auditável</b>
+<div class="memory"><span>15/15</span> etapas • A–G • drenagens • lavagem/V12 • raqueteamento • segurança • registros</div>
+<p class="subtle">O checklist abaixo permite marcar cada ação estudada. O progresso é salvo localmente no aparelho.</p>
+</div>
+</section>
+
+<section class="card">
+<div class="tabs">
+<button class="tab active" data-tab="journey">1. Jornada 15 etapas</button>
+<button class="tab" data-tab="inventory">2. Esgotamento A–G</button>
+<button class="tab" data-tab="drain">3. Vents / drenos</button>
+<button class="tab" data-tab="wash">4. Lavagem / V12</button>
+<button class="tab" data-tab="blind">5. Raqueteamento</button>
+<button class="tab" data-tab="roles">6. CIC × Campo / Segurança</button>
+<button class="tab" data-tab="exam">7. Avaliação 100%</button>
+<button class="tab" data-tab="doc">8. Documento / cobertura</button>
+</div>
+
+<div class="view active" data-view="journey">
+<div class="box">
+<h2>Jornada completa 5.2.1.1 → 5.2.1.15</h2>
+<p>Selecione uma etapa. Marque as ações conforme estudar. A etapa só aparece como concluída quando todas as ações forem marcadas.</p>
+<div class="coverage" id="coverageTop"></div>
+<div class="stepnav" id="stepNav"></div>
+<div id="stepCard" class="stepcard"></div>
+</div>
+</div>
+
+<div class="view" data-view="inventory">
+<div class="box">
+<h2>5.2.1.7 — Descartar a DEA do Sistema</h2>
+<p>Treine as rotas A–G como mapa de origem → destino → elemento de controle → condição de confirmação.</p>
+<div id="inventoryGrid" class="detailgrid"></div>
+</div>
+</div>
+
+<div class="view" data-view="drain">
+<div class="box">
+<h2>Drenagem completa: 5.2.1.8 + 5.2.1.13</h2>
+<p>Os destinos são parte da decisão. O treinamento separa esgoto amínico de esgoto oleoso exatamente como o documento.</p>
+<div id="drainGrid" class="detailgrid"></div>
+</div>
+</div>
+
+<div class="view" data-view="wash">
+<div class="box">
+<h2>5.2.1.14 — Lavagem com água / V12 / retrolavagem</h2>
+<p>Cada bloco abaixo representa uma preparação específica do procedimento. Nenhum equipamento foi condensado em “lavar geral”.</p>
+<div id="washGrid" class="detailgrid"></div>
+</div>
+</div>
+
+<div class="view" data-view="blind">
+<div class="box">
+<h2>5.2.1.15 — Raqueteamento / Figura 8</h2>
+<div class="note"><b>Gate anterior à entrega:</b> realizar teste de explosividade e H₂S; somente com resultado satisfatório entregar o equipamento para manutenção.</div>
+<div id="blindGrid" class="detailgrid" style="margin-top:10px"></div>
+</div>
+</div>
+
+<div class="view" data-view="roles">
+<div class="grid2">
+<div class="box">
+<h2>CIC × Campo</h2>
+<div id="roleGrid"></div>
+</div>
+<div class="box">
+<h2>Itens críticos para verificação</h2>
+<div id="criticalGrid"></div>
+<div class="note">Em caso de anomalias decorrentes dessas atividades, o procedimento direciona o tratamento conforme o padrão de Diretrizes para Tratar Anomalias do Processo.</div>
+</div>
+</div>
+</div>
+
+<div class="view" data-view="exam">
+<div class="box">
+<h2>Avaliação completa</h2>
+<p>Questões embaralhadas cobrindo as 15 etapas, subetapas A–G, drenagem, lavagem, raqueteamento, itens críticos e registros.</p>
+<div id="examList"></div>
+<div class="scorebar" id="scoreBar"></div>
+</div>
+</div>
+
+<div class="view" data-view="doc">
+<div class="box">
+<h2>Documento-base e matriz de cobertura</h2>
+<div id="docMeta"></div>
+<div id="coverageMatrix"></div>
+</div>
+</div>
+</section>
+</div>
+
+<script>
+const STEPS=[{"id": "5.2.1.1", "title": "Avisar ao Supervisor Focal, TEU/TE, TEU/AE", "owners": "R: Supervisor / TO • A: TO CIC • I: Supervisor Focal, TEU-TE/AE", "objective": "Preparar a parada e garantir destino para GLP fora de especificação.", "actions": ["Via rádio e telefone.", "Solicitar à TE uma esfera para armazenamento de GLP fora de especificação."], "decision": "Antes de alterar o tratamento DEA, a disponibilidade da esfera para GLP fora de especificação deve estar coordenada.", "confirm": "Confirmar a condição acordada com TE e comunicação às partes previstas."}, {"id": "5.2.1.2", "title": "Regenerar a DEA do sistema", "owners": "R: Supervisor / TO • A: TO CIC / TO Campo", "objective": "Reduzir o teor de H₂S do inventário antes da parada.", "actions": ["Fazer circulação do inventário com a E-3913 aquecida durante o tempo necessário para que o teor de H₂S seja inferior a 0,2%."], "decision": "Se H₂S ainda estiver ≥ 0,2%, manter a regeneração.", "confirm": "Gate concluído somente com H₂S confirmado < 0,2%."}, {"id": "5.2.1.3", "title": "Desviar o gás ácido da URE para flare químico", "owners": "R: Supervisor / TO • A: TO CIC • I: Supervisor Focal, TEU-AE", "objective": "Alterar a rota do gás ácido preservando o controle da pressão do sistema.", "actions": ["Fechar PV-39524A através do PIC-39524A.", "Controlar a pressão do sistema através da PV-39524B."], "decision": "A mudança de rota não se encerra no fechamento da PV-39524A; o CIC deve acompanhar o controle da pressão.", "confirm": "Confirmar gás ácido desviado para flare químico e pressão sob controle pela estratégia prevista."}, {"id": "5.2.1.4", "title": "Cortar vapor de baixa para o C-3943 A/B (refervedor da E-3913)", "owners": "R: Supervisor / TO • A: TO Campo", "objective": "Retirar a fonte térmica da E-3913.", "actions": ["Fechar o PIC-39549.", "Fechar o TIC-39544.", "Bloquear a montante e jusante do C-3943 A/B."], "decision": "Com gás ácido já desviado, retirar a energia térmica conforme a sequência.", "confirm": "Confirmar PIC-39549/TIC-39544 fechados e bloqueios do C-3943 A/B realizados."}, {"id": "5.2.1.5", "title": "Parar a circulação de DEA", "owners": "R: Supervisor / TO • A: TO Campo", "objective": "Encerrar circulação somente após resfriamento suficiente.", "actions": ["Parar a circulação de DEA quando a temperatura cair a ± 35°C."], "decision": "Se temperatura ainda estiver acima da condição de aproximadamente 35°C, manter circulação.", "confirm": "Confirmar temperatura em torno de ±35°C antes da parada da circulação."}, {"id": "5.2.1.6", "title": "Retirar os C-3941 e C-3942 de operação", "owners": "R: Supervisor / TO • A: TO CIC / TO Campo", "objective": "Retirar o sistema de resfriamento da condição normal.", "actions": ["Parar os ventiladores do C-3941.", "Cortar a água de refrigeração para o C-3942 (condensador de topo da E-3913)."], "decision": "Após a circulação parada no critério térmico, retirar C-3941/C-3942.", "confirm": "Confirmar ventiladores C-3941 parados e água de refrigeração do C-3942 cortada."}, {"id": "5.2.1.7", "title": "Descartar a DEA do Sistema", "owners": "R: Supervisor / TO • A: TO CIC / TO Campo", "objective": "Retirar os inventários de DEA pelas rotas previstas no procedimento.", "actions": ["A) Esgotar o F-3932 para a E-3913. Manter J-3929 A/B operando até cavitar, para zerar o inventário de DEA.", "B) Esgotar a DEA da E-3912 para o F-3931. Drenar através da LV-39503 sob controle do LIC-39503; se necessário baixar o set point do PIC-39555 para facilitar o escoamento. Durante a drenagem, ter cuidado para não arrastar GLP.", "C) Esgotar a DEA do F-3930. Abrir o dreno para esgoto amínico; abrir interligação da descarga da J-3930 com F-3936; manter J-3930 operando drenando F-3937 para F-3936; solicitar Carro Vácuo.", "D) Drenar a DEA do F-3929. Abrir dreno para esgoto amínico e recolher inventário para Carro Vácuo.", "E) Esgotar a DEA da E-3911 para F-3931 através da LV-39509 sob controle LIC-39509; se necessário baixar set point do PIC-39555 para facilitar escoamento.", "F) Esgotar toda DEA do F-3931 para E-3913. Pressurizar F-3931 através da PV-39518A sob controle do PIC-39518 e abrir FV-39534.", "G) Descartar a DEA da E-3913 para F-3936. Bloquear entrada de DEA pobre em FFV-39521 (E-3912), FFV-39522 (E-3911) e linha de 2” a montante do FT-39508 (chuveiro de DEA pobre para F-3931); abrir interligação da descarga da J-3928 A/B para F-3936 através da HS-39513."], "decision": "Executar as rotas A–G na ordem e com os destinos previstos, sem trocar origem/destino.", "confirm": "Confirmar cada inventário esgotado e cada gate específico (cavitação J-3929, controle de GLP, pressurização/abertura das rotas, bloqueios de DEA pobre)."}, {"id": "5.2.1.8", "title": "Drenar os equipamentos para esgoto amínico", "owners": "R: Supervisor / TO • A: TO CIC / TO Campo", "objective": "Drenar equipamentos do circuito de DEA para o destino especificado.", "actions": ["Manter a J-3930 operando para o F-3936 para não deixar o nível do mesmo fora de controle.", "Abrir o dreno dos equipamentos para esgoto amínico: C-3940 (intercambiador DEA pobre/DEA rica, casco e tubos); C-3944 (resfriador DEA pobre, tubos); C-3945 (resfriador DEA pobre, casco); C-3946 (resfriador DEA pobre para E-3912, tubos); G-3901 A/B (filtro DEA pobre); G-3902 (filtro de carvão DEA pobre)."], "decision": "Durante a drenagem, manter atenção ao nível de F-3936 e à rota correta dos equipamentos.", "confirm": "Confirmar J-3930 na condição prevista e drenos dos equipamentos alinhados para esgoto amínico."}, {"id": "5.2.1.9", "title": "Retirar o C-3944 e C-3945 de operação", "owners": "R: Supervisor / TO • A: TO CIC / TO Campo", "objective": "Retirar os resfriadores da condição de operação.", "actions": ["Parar os motores do C-3944.", "Bloquear a água para o C-3945."], "decision": "Retirar ambos os equipamentos, não apenas um deles.", "confirm": "Confirmar motores C-3944 parados e água para C-3945 bloqueada."}, {"id": "5.2.1.10", "title": "Bloquear a linha de carga da E-3911 e do topo do F-3929", "owners": "R: Supervisor / TO • A: TO CIC / TO Campo", "objective": "Isolar as linhas indicadas antes do deslocamento do GLP.", "actions": ["Fechar a HV-39501 e a MCV-39501.", "Bloquear a linha de carga da E-3911."], "decision": "Não avançar ao deslocamento de GLP sem os bloqueios previstos.", "confirm": "Confirmar HV-39501/MCV-39501 fechadas e linha de carga da E-3911 bloqueada."}, {"id": "5.2.1.11", "title": "Deslocar o GLP para o flare", "owners": "R: Supervisor / TO • A: TO CIC / TO Campo", "objective": "Deslocar GLP e condicionar níveis/rotas com água conforme o procedimento.", "actions": ["Abrir a válvula de vente para o flare.", "Bloquear válvula de 2” a jusante da XV-39511 (fundo do F-3929).", "Abrir a injeção de água de lavagem na base da E-3911.", "Observar o nível do F-3929.", "Fechar o PIC-39518.", "Bloquear as válvulas a montante e jusante da PV-39518A, PV-39518B e PV-39518C.", "Colocar a HS-39515 no manual.", "Bloquear as válvulas a montante e jusante da XV-39515.", "Abrir a injeção de água de lavagem a jusante do C-3940 (tubos) até que o F-3931 esteja com nível de 80%.", "Manter fechado o vent do topo do F-3931 (“2”) e a FV-39538 de entrada da E-3913 aberta.", "Parar a injeção de água para o F-3931.", "Abrir a injeção de água industrial no fundo da E-3913 até que apareça nível desejado na mesma.", "Drenar a E-3911 e E-3912.", "Observar o aparecimento de nível nas torres."], "decision": "Essa fase exige acompanhamento de rota para flare, níveis e estados dos controles/bloqueios em conjunto.", "confirm": "Confirmar os bloqueios, a condição de 80% no F-3931, a condição de vent/FV-39538, níveis formados conforme previsto e drenagem das torres."}, {"id": "5.2.1.12", "title": "Liberar o tratamento DEA para lavagem e purga química", "owners": "R: Supervisor / TO • A: TO Campo", "objective": "Condicionar o sistema para a etapa de lavagem/purga química.", "actions": ["Condicionar, junto com a empresa contratada, o sistema DEA para lavagem e purga química."], "decision": "A passagem para lavagem/purga química depende do condicionamento conjunto previsto.", "confirm": "Confirmar sistema condicionado com a empresa contratada."}, {"id": "5.2.1.13", "title": "Esgotar e purgar os equipamentos", "owners": "R: Supervisor / TO • A: TO Campo", "objective": "Abrir vents/drenos de cada equipamento para os destinos especificados.", "actions": ["Abrir vent do topo do F-3935 e válvula de 2” de dreno para esgoto oleoso.", "Abrir vent do topo da E-3912 e válvula na linha de dreno 2” para esgoto oleoso.", "Abrir vent do topo do F-3930 e válvula da linha de dreno 2” para esgoto amínico.", "Abrir vent do topo do F-3929 e válvula da linha de dreno 1” para esgoto amínico.", "Abrir vent do topo da E-3911 e válvula da linha de dreno de 3” para esgoto oleoso.", "Abrir vent do topo do F-3931 e válvula da linha de dreno de 2” para esgoto oleoso.", "Abrir vent do topo da E-3913 e válvula da linha de dreno de 3” para esgoto oleoso.", "Abrir vent do topo do F-3932 e válvula da linha de dreno 1” para esgoto oleoso.", "Abrir vent do topo do F-3937 e válvula da linha de dreno ¾” para esgoto oleoso.", "Abrir dreno a jusante do C-3946 (tubos) 2” para esgoto oleoso e vent do mesmo.", "Abrir dreno a jusante do C-3945 (casco) 2” para esgoto oleoso e vent do mesmo.", "Abrir dreno a jusante do C-3944 de 1” para esgoto oleoso e vent do mesmo.", "Abrir dreno do G-3901 A/B 2” para esgoto oleoso e vent no topo.", "Abrir dreno do G-3902 de 1½” para esgoto oleoso e vent.", "Abrir dreno do C-3940 A/B de 1” para esgoto oleoso e vent.", "Abrir dreno do C-3943 A/B de 2” para esgoto oleoso e vent.", "Abrir dreno do C-3941 de 2” para esgoto oleoso e vent.", "Abrir dreno do C-3942 2” para esgoto oleoso e vent."], "decision": "O operador deve diferenciar esgoto amínico de esgoto oleoso e não trocar os destinos.", "confirm": "Confirmar vent e dreno de cada equipamento conforme diâmetro/destino previsto."}, {"id": "5.2.1.14", "title": "Lavar com água os equipamentos", "owners": "R: Supervisor / TO • A: TO Campo / T Segurança", "objective": "Lavar, purgar, resfriar e preparar os equipamentos/linhas para manutenção.", "actions": ["Encher a E-3911 de água até sair pelo vent e drenar a E-3911.", "Encher a E-3912 de água até sair pelo vent e drenar a E-3912.", "F-3935: bloquear LT-39501; abrir vent na linha de topo e verificar abertura do dreno; alinhar V12 para purga; parar purga; aguardar equipamento esfriar.", "F-3930: verificar vent e dreno abertos; bloquear válvula dos LT-39506; alinhar V12 para purga; parar purga; aguardar equipamento esfriar.", "F-3929: bloquear LT-39511; verificar vent de 1” do topo e linha de 2” entrada de carga; alinhar V12 linha de 1” para purga; parar purga; aguardar equipamento esfriar.", "F-3931: bloquear LT’s 39514/515; verificar abertura do vent de 2” e drenos; alinhar V12 para purga; aguardar equipamento esfriar; parar purga.", "C-3940 A/B: abrir dreno de 1” para esgoto oleoso e vent.", "G-3902: bloquear válvula de saída de DEA para J-3928 A/B; bloquear PDT-39541; abrir válvula de 3” no topo para F-3934; fazer retrolavagem alinhando água e vapor de baixa; parar retrolavagem; abrir vent e drenar G-3902.", "E-3913: bloquear LT-39518; verificar abertura do vent e dreno e utilizar máscara contra gás; alinhar V12 para purga; parar purga; aguardar equipamento esfriar.", "F-3932: verificar vents e drenos abertos; bloquear LT’s 39519/520; bloquear descarga, sucção e recirculação FV-39515 da J-3929; alinhar V12 para purga; parar purga; aguardar equipamento esfriar.", "Realizar purga com água ou vapor em todas as linhas do tratamento e entregar os trechos onde serão realizados serviços para manutenção.", "C-3945: bloquear válvulas de entrada e saída de DEA, encher de água e drenar.", "C-3944: bloquear válvulas de entrada e saída de DEA, encher de água e drenar.", "C-3942: bloquear válvulas de entrada e saída de DEA, encher de água e drenar.", "C-3943 A/B: bloquear válvulas de entrada e saída de DEA, encher de água e drenar.", "C-3941: bloquear válvulas de entrada e saída de DEA, encher de água e drenar.", "G-3901 A/B: bloquear válvulas de entrada e saída de DEA, encher de água e drenar.", "C-3946: bloquear válvulas de entrada e saída de DEA, encher de água e drenar.", "Realizar purga com água ou vapor em todas as linhas do tratamento e entregar os trechos onde serão realizados serviços para manutenção."], "decision": "Cada equipamento possui uma preparação específica; não tratar “lavar o sistema” como um único comando genérico.", "confirm": "Confirmar bloqueios de instrumentos quando previstos, vents/drenos abertos, ciclos V12/retrolavagem executados, resfriamento e lavagem dos equipamentos/linhas."}, {"id": "5.2.1.15", "title": "Raquetear todos os Equipamentos", "owners": "R: Supervisor / TO • A: TO Campo", "objective": "Confirmar atmosfera satisfatória e estabelecer os isolamentos físicos previstos.", "actions": ["Realizar teste de explosividade e H₂S no equipamento a ser liberado; caso o resultado seja satisfatório, entregar o equipamento para manutenção.", "Virar a figura 8 na entrada de carga da E-3912.", "Virar a figura 8 na linha de 6” topo do F-3935.", "Virar a figura 8 na linha de 6” fundo do F-3935.", "Virar a figura 8 na linha de 1” V12 para purga do F-3935.", "Virar a figura 8 na entrada de carga para o F-3930 para isolar a E-3912.", "Virar a figura 8 na linha de 2” dreno do F-3930.", "Virar a figura 8 na linha de 1” V12 para purga do F-3930.", "Virar a figura 8 na linha de 10” topo do F-3929.", "Virar a figura 8 na linha de 10” topo da E-3911.", "Virar a figura 8 na linha de 1” saída para flare no fundo do F-3929.", "Virar a figura 8 na linha de 10” topo do F-3929. (repetido no documento)", "Virar a figura 8 na linha de 1” saída para flare no fundo do F-3929. (repetido no documento)", "Virar a figura 8 na linha de 2” dreno do F-3929.", "Virar a figura 8 na linha de 1” V12 para purga do F-3929.", "Virar a figura 8 na linha de 8” entrada de DEA rica do F-3931.", "Virar a figura 8 na linha de 2½” entrada de DEA pobre para entrada do recheio no topo do F-3931.", "Virar a figura 8 na linha de 1” dreno de HC’s do F-3931.", "Virar a figura 8 na linha de 2” topo do F-3931.", "Virar a figura 8 na linha de 8” entrada da E-3913 (OBS: usar máscara contra gases).", "Virar a figura 8 na linha de 2” para purga do F-3931.", "Virar a figura 8 na linha de 8” no fundo do F-3931.", "Virar a figura 8 no fundo do G-3902.", "Virar a figura 8 na linha de 3” na entrada do G-3902.", "Virar a figura 8 na linha de 3” na saída para PSV-39524 do G-3902.", "Virar a figura 8 na linha de 10” entrada e linha de 6” saída do C-3943 A/B.", "Virar a figura 8 na linha de 16” do topo da E-3913.", "Virar a figura 8 na linha de 12” no fundo da E-3913.", "Virar a figura 8 na linha de 2” de V12 para purga da E-3913.", "Virar a figura 8 na linha de 10” saída de gases para URE.", "Virar a figura 8 na linha de 2” fundo do F-3932.", "Virar a figura 8 na linha de 1” V12 para purga do F-3932."], "decision": "Não liberar equipamento somente porque drenagem/lavagem terminaram; a atmosfera e os isolamentos físicos precisam estar satisfatórios.", "confirm": "Confirmar teste de explosividade/H₂S satisfatório, figura 8 nos pontos previstos e requisitos formais atendidos."}];
+const CRITICAL=[{"activity": "Esgotar e purgar os equipamentos", "risk": "Presença de Hidrocarboneto", "control": "Uso de máscara para hidrocarboneto; Avaliação SMS/SI."}, {"activity": "Lavar com água os equipamentos", "risk": "Presença de H₂S", "control": "Uso de máscara para H₂S; Avaliação SMS/SI."}, {"activity": "Raquetear todos os Equipamentos", "risk": "Presença de H₂S", "control": "Uso de máscara para H₂S; Avaliação SMS/SI."}];
+const META={"document": "PE.REF.OPE.CCF.049", "revision": "01", "title": "Parada e Esgotamento do Tratamento DEA da U-39", "revision_history": ["Revisão 00 — 05/10/2022 — Emissão inicial.", "Revisão 01 — 08/09/2025 — Alterado função Cotur para Supervisor Focal (pág. 5); demais alterações sublinhadas no corpo do procedimento."], "objective": "Sistematizar atuação dos operadores da UN - REFMAT - CB/CCFR na Parada e Esgotamento do tratamento DEA da U-39.", "references": "Referências normativas: N/A. Documentos associados: N/A.", "scope": "Aplica-se a UN - REFMAT/CB/CCFR-U-39.", "definitions": ["CIC — Centro Integrado de Controle", "Flare — Tocha", "LB — Limite de Bateria", "SDCD — Sistema Digital de Controle Distribuído"], "resources": "N/A.", "performance": "N/A.", "anomalies": "As anomalias decorrentes dessas atividades serão tratadas conforme Padrão - Diretrizes para Tratar Anomalias do Processo.", "adequacy": "Acompanhar os cronogramas de realização das avaliações e a entrega dos Relatórios de Avaliação. O não cumprimento do programa de avaliações, conforme estabelecido, deve ser tratado como anomalia.", "improvement": "Revisões programadas do padrão no APOLLUS.", "documentation": "N/A.", "records": "Checklist — armazenamento: Pasta na CCL ou CIC; grau de sigilo: Corporativo; proteção/recuperação: conforme critérios específicos do setor; retenção: 07 dias; descarte: triturar.", "annexes": ["Anexo A — Fluxograma Parada e Esgotamento do Tratamento DEA da U-39.", "Anexo B — Checklist Parada e Esgotamento do Tratamento DEA da U-39."]};
+const EXAM=[{"step": "5.2.1.1", "q": "A parada foi solicitada, mas ainda não há confirmação de esfera para GLP fora de especificação. O que fazer?", "a": ["Confirmar com TE a esfera antes de avançar.", "Iniciar regeneração e solicitar esfera apenas antes da drenagem.", "Desviar gás ácido para flare e depois coordenar TE."], "ok": 0}, {"step": "5.2.1.2", "q": "H₂S da DEA está em 0,24% com E-3913 aquecida e circulação em serviço. Qual decisão?", "a": ["Manter regeneração até H₂S < 0,2%.", "Cortar vapor e manter circulação fria.", "Parar circulação e iniciar drenagem."], "ok": 0}, {"step": "5.2.1.3", "q": "Ao desviar o gás ácido da URE, qual relação de controle deve ser preservada?", "a": ["Fechar PV-39524A via PIC-39524A e controlar pressão via PV-39524B.", "Fechar PV-39524B e controlar pressão via PV-39524A.", "Manter ambas abertas e controlar por nível da E-3913."], "ok": 0}, {"step": "5.2.1.4", "q": "Qual conjunto representa o corte de vapor de baixa do C-3943 A/B?", "a": ["Fechar PIC-39549, fechar TIC-39544 e bloquear montante/jusante do C-3943 A/B.", "Fechar somente PIC-39549.", "Parar C-3941/C-3942 antes do corte de vapor."], "ok": 0}, {"step": "5.2.1.5", "q": "Após cortar vapor, a DEA está a 42°C. A circulação deve ser parada?", "a": ["Não; manter até aproximadamente 35°C.", "Sim; o corte do vapor é suficiente.", "Sim; retirar os resfriadores e parar simultaneamente."], "ok": 0}, {"step": "5.2.1.6", "q": "Com circulação parada a aproximadamente 35°C, como retirar C-3941/C-3942?", "a": ["Parar ventiladores C-3941 e cortar água do C-3942.", "Cortar apenas água do C-3942.", "Parar C-3941 e manter C-3942 durante toda drenagem."], "ok": 0}, {"step": "5.2.1.7-A", "q": "Qual é a rota do F-3932 e o critério operacional indicado?", "a": ["F-3932 → E-3913 via J-3929 A/B até cavitar para zerar inventário.", "F-3932 → F-3931 até 80%.", "F-3932 → esgoto amínico por carro vácuo."], "ok": 0}, {"step": "5.2.1.7-B", "q": "Na drenagem E-3912 → F-3931, qual cuidado é explícito?", "a": ["Evitar arraste de GLP.", "Levar J-3929 à cavitação.", "Manter vent do F-3931 aberto."], "ok": 0}, {"step": "5.2.1.7-C", "q": "Ao esgotar F-3930, qual conjunto pertence à etapa?", "a": ["Dreno para esgoto amínico, interligação descarga J-3930/F-3936, J-3930 drenando F-3937→F-3936 e carro vácuo.", "Transferir para E-3913 por PV-39518A.", "Drenar para F-3931 por LV-39509."], "ok": 0}, {"step": "5.2.1.7-D", "q": "Qual destino é indicado para DEA do F-3929?", "a": ["Esgoto amínico com recolhimento para carro vácuo.", "E-3913 via J-3929.", "F-3936 via HS-39513."], "ok": 0}, {"step": "5.2.1.7-E", "q": "Qual rota esgota a DEA da E-3911?", "a": ["E-3911 → F-3931 via LV-39509/LIC-39509.", "E-3911 → F-3936 via HS-39513.", "E-3911 → F-3932 via J-3929."], "ok": 0}, {"step": "5.2.1.7-F", "q": "Como esgotar F-3931 para E-3913?", "a": ["Pressurizar via PV-39518A/PIC-39518 e abrir FV-39534.", "Abrir LV-39503 e baixar PIC-39555.", "Usar HS-39513 e J-3928 A/B."], "ok": 0}, {"step": "5.2.1.7-G", "q": "Antes de E-3913 → F-3936, quais alimentações de DEA pobre devem ser bloqueadas?", "a": ["FFV-39521, FFV-39522 e linha 2” a montante FT-39508.", "PV-39518A/B/C e XV-39515.", "HV-39501 e MCV-39501 somente."], "ok": 0}, {"step": "5.2.1.8", "q": "Durante drenagem dos equipamentos para esgoto amínico, por que manter J-3930 para F-3936?", "a": ["Para não deixar o nível do F-3936 fora de controle.", "Para reduzir H₂S da DEA.", "Para pressurizar F-3931."], "ok": 0}, {"step": "5.2.1.9", "q": "Como retirar C-3944/C-3945?", "a": ["Parar motores C-3944 e bloquear água C-3945.", "Bloquear água dos dois.", "Parar apenas C-3945."], "ok": 0}, {"step": "5.2.1.10", "q": "Qual conjunto precede o deslocamento de GLP?", "a": ["Fechar HV-39501 e MCV-39501 e bloquear linha de carga da E-3911.", "Fechar PIC-39518 e abrir FV-39538.", "Bloquear LT-39511 e FV-39515."], "ok": 0}, {"step": "5.2.1.11", "q": "Durante deslocamento de GLP, qual nível explicitamente citado deve ser atingido no F-3931?", "a": ["80%.", "60%.", "35%."], "ok": 0}, {"step": "5.2.1.11", "q": "Qual condição deve ser mantida no topo/entrada durante a água para F-3931?", "a": ["Vent do topo F-3931 fechado e FV-39538 de entrada E-3913 aberta.", "Vent aberto e FV-39538 fechada.", "PIC-39518 aberto."], "ok": 0}, {"step": "5.2.1.12", "q": "Quem deve ser envolvido no condicionamento para lavagem e purga química?", "a": ["Empresa contratada, conforme procedimento.", "Somente CIC.", "Somente TE."], "ok": 0}, {"step": "5.2.1.13", "q": "F-3930 e F-3929 drenam para qual destino na etapa de esgotar/purgar equipamentos?", "a": ["Esgoto amínico.", "Esgoto oleoso.", "F-3936."], "ok": 0}, {"step": "5.2.1.13", "q": "E-3911, F-3931, E-3913, F-3932 e F-3937 têm drenagem indicada para qual destino nessa etapa?", "a": ["Esgoto oleoso.", "Esgoto amínico.", "F-3936."], "ok": 0}, {"step": "5.2.1.14", "q": "No G-3902, qual preparação faz parte da lavagem?", "a": ["Bloquear saída DEA para J-3928 A/B e PDT-39541, abrir topo para F-3934, retrolavar com água/vapor, parar, ventar e drenar.", "Apenas alinhar V12.", "Apenas encher de água e drenar."], "ok": 0}, {"step": "5.2.1.14", "q": "Antes de purgar E-3913 com V12, qual cuidado explícito existe?", "a": ["Verificar vent/dreno e utilizar máscara contra gás.", "Manter LT-39518 em serviço.", "Abrir gás para URE."], "ok": 0}, {"step": "5.2.1.14", "q": "No F-3932, quais bloqueios da J-3929 são citados antes da purga V12?", "a": ["Descarga, sucção e recirculação FV-39515.", "Somente descarga.", "Sucção e vapor ativo."], "ok": 0}, {"step": "5.2.1.15", "q": "Antes de entregar um equipamento à manutenção, qual gate deve ser atendido?", "a": ["Teste de explosividade e H₂S satisfatório.", "Apenas ausência de nível.", "Apenas figura 8 virada."], "ok": 0}, {"step": "5.2.1.15", "q": "Qual ponto do raqueteamento traz observação de uso de máscara contra gases?", "a": ["Linha de 8” entrada da E-3913.", "Linha 6” topo F-3935.", "Linha 2” fundo F-3932."], "ok": 0}, {"step": "Itens críticos", "q": "Na atividade “Esgote e purgue os equipamentos”, qual item crítico é citado?", "a": ["Presença de Hidrocarboneto.", "Presença de água.", "Baixa pressão."], "ok": 0}, {"step": "Itens críticos", "q": "Na lavagem com água e no raqueteamento, qual presença é tratada como item crítico?", "a": ["H₂S.", "CO₂.", "Oxigênio."], "ok": 0}, {"step": "Registros", "q": "Qual registro é citado e qual retenção?", "a": ["Checklist; 07 dias.", "Permissão de trabalho; 30 dias.", "Relatório de processo; 1 ano."], "ok": 0}];
+
+const tabs=[...document.querySelectorAll('.tab')],views=[...document.querySelectorAll('.view')];
+tabs.forEach(t=>t.onclick=()=>{tabs.forEach(x=>x.classList.remove('active'));views.forEach(v=>v.classList.remove('active'));t.classList.add('active');document.querySelector(`[data-view="${t.dataset.tab}"]`).classList.add('active')});
+
+const key='dea-v24-progress';
+let progress={};
+try{progress=JSON.parse(localStorage.getItem(key)||'{}')}catch(e){progress={}}
+function save(){localStorage.setItem(key,JSON.stringify(progress))}
+function shuffle(a){return a.map((v,i)=>({v,i})).sort(()=>Math.random()-.5)}
+
+let current=0;
+function stepComplete(i){const s=STEPS[i];return s.actions.every((_,j)=>progress[s.id+'-'+j])}
+function totalActions(){return STEPS.reduce((n,s)=>n+s.actions.length,0)}
+function checkedActions(){return STEPS.reduce((n,s)=>n+s.actions.filter((_,j)=>progress[s.id+'-'+j]).length,0)}
+function renderCoverage(){
+ const comp=STEPS.filter((_,i)=>stepComplete(i)).length, ta=totalActions(), ca=checkedActions();
+ const html=`<div class="cov"><b>${comp}/15</b><small>etapas concluídas</small></div><div class="cov"><b>${ca}/${ta}</b><small>ações estudadas</small></div><div class="cov"><b>7/7</b><small>rotas A–G presentes</small></div><div class="cov"><b>18</b><small>pontos vent/dreno 5.2.1.13</small></div><div class="cov"><b>100%</b><small>seções do PDF mapeadas</small></div>`;
+ document.getElementById('coverageTop').innerHTML=html;
+}
+function renderNav(){
+ const n=document.getElementById('stepNav');n.innerHTML='';
+ STEPS.forEach((s,i)=>{const b=document.createElement('button');b.className='stepbtn '+(i===current?'active ':'')+(stepComplete(i)?'done':'');b.textContent=s.id;b.title=s.title;b.onclick=()=>{current=i;renderNav();renderStep()};n.appendChild(b)})
+}
+function renderStep(){
+ const s=STEPS[current], card=document.getElementById('stepCard');
+ card.innerHTML=`<div class="phase">${s.id} • ${s.owners}</div><h2>${s.title}</h2><p><b>Objetivo operacional:</b> ${s.objective}</p><div class="actionlist">${s.actions.map((a,j)=>`<label class="action ${progress[s.id+'-'+j]?'checked':''}"><input type="checkbox" data-k="${s.id+'-'+j}" ${progress[s.id+'-'+j]?'checked':''}><span>${a}</span></label>`).join('')}</div><div class="gate"><strong>Decisão CIC:</strong> ${s.decision}</div><div class="gate"><strong>Confirmação para avançar:</strong> ${s.confirm}</div>`;
+ card.querySelectorAll('input').forEach(x=>x.onchange=()=>{progress[x.dataset.k]=x.checked;save();renderCoverage();renderNav();x.closest('.action').classList.toggle('checked',x.checked)})
+}
+renderCoverage();renderNav();renderStep();
+
+const step7=STEPS.find(s=>s.id==='5.2.1.7');
+document.getElementById('inventoryGrid').innerHTML=step7.actions.map((a,i)=>`<div class="detail"><h4>${String.fromCharCode(65+i)} • Inventário</h4><p>${a}</p></div>`).join('');
+
+const s8=STEPS.find(s=>s.id==='5.2.1.8'),s13=STEPS.find(s=>s.id==='5.2.1.13');
+document.getElementById('drainGrid').innerHTML=
+`<div class="detail"><h4>5.2.1.8 • Controle F-3936</h4><ul>${s8.actions.map(a=>`<li>${a}</li>`).join('')}</ul></div>`+
+s13.actions.map((a,i)=>`<div class="detail"><h4>5.2.1.13 • Ponto ${i+1}/18</h4><p>${a}</p></div>`).join('');
+
+const s14=STEPS.find(s=>s.id==='5.2.1.14');
+document.getElementById('washGrid').innerHTML=s14.actions.map((a,i)=>`<div class="detail"><h4>Lavagem • Bloco ${i+1}</h4><p>${a}</p></div>`).join('');
+
+const s15=STEPS.find(s=>s.id==='5.2.1.15');
+document.getElementById('blindGrid').innerHTML=s15.actions.slice(1).map((a,i)=>`<div class="detail"><h4>Figura 8 • Ponto ${i+1}</h4><p>${a}</p></div>`).join('');
+
+document.getElementById('roleGrid').innerHTML=STEPS.map(s=>`<div class="role"><div class="phase">${s.id}</div><b>${s.title}</b><p class="subtle">${s.owners}</p></div>`).join('');
+document.getElementById('criticalGrid').innerHTML=CRITICAL.map(c=>`<div class="critical"><b>${c.activity}</b><div>Item crítico: ${c.risk}</div><div>Controle: ${c.control}</div></div>`).join('');
+
+let examCorrect=0,examAnswered=0;
+const examList=document.getElementById('examList');
+function renderExam(){
+ examList.innerHTML='';
+ EXAM.forEach((q,idx)=>{
+   const d=document.createElement('div');d.className='assess';
+   d.innerHTML=`<h3>${idx+1}. ${q.step}</h3><p>${q.q}</p><div class="opts"></div><div class="result"></div>`;
+   shuffle(q.a).forEach(o=>{const b=document.createElement('button');b.className='btn';b.textContent=o.v;b.onclick=()=>{if(d.classList.contains('answered'))return;examAnswered++;const good=o.i===q.ok;if(good)examCorrect++;d.classList.add('answered',good?'correct':'incorrect');d.querySelector('.result').textContent=good?'Decisão correta.':'Revise a etapa indicada do procedimento.';renderScore()};d.querySelector('.opts').appendChild(b)});
+   examList.appendChild(d);
+ });
+ renderScore();
+}
+function renderScore(){
+ const pct=Math.round(examCorrect/Math.max(1,examAnswered)*100);
+ document.getElementById('scoreBar').innerHTML=`<div><b>${examCorrect}</b><small>acertos</small></div><div><b>${examAnswered-examCorrect}</b><small>erros</small></div><div><b>${examAnswered}/${EXAM.length}</b><small>respondidas</small></div><div><b>${pct}%</b><small>precisão</small></div>`;
+}
+renderExam();
+
+document.getElementById('docMeta').innerHTML=`
+<div class="docsec"><h3>${META.document} • Revisão ${META.revision}</h3><p>${META.title}</p><ul>${META.revision_history.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+<div class="docsec"><h3>Objetivo / Abrangência</h3><p>${META.objective}</p><p>${META.scope}</p><p>${META.references}</p></div>
+<div class="docsec"><h3>Definições</h3><ul>${META.definitions.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+<div class="docsec"><h3>5.3–6 • Gestão do padrão</h3><p><b>Recursos:</b> ${META.resources}</p><p><b>Indicadores:</b> ${META.performance}</p><p><b>Anomalias:</b> ${META.anomalies}</p><p><b>Adequação:</b> ${META.adequacy}</p><p><b>Avaliação/melhoria:</b> ${META.improvement}</p><p><b>Documentação:</b> ${META.documentation}</p></div>
+<div class="docsec"><h3>6.2 Controle de registros</h3><p>${META.records}</p></div>
+<div class="docsec"><h3>7. Anexos</h3><ul>${META.annexes.map(x=>`<li>${x}</li>`).join('')}</ul></div>`;
+
+document.getElementById('coverageMatrix').innerHTML=`<div class="docsec"><h3>Matriz 100%</h3><p>Etapas 5.2.1.1–5.2.1.15: <b>15/15</b></p><p>Subetapas descarte DEA 5.2.1.7: <b>A–G / 7 de 7</b></p><p>Vents/drenos 5.2.1.13: <b>18/18</b></p><p>Lavagem/purga 5.2.1.14: <b>${s14.actions.length} blocos mapeados</b></p><p>Pontos de figura 8 5.2.1.15: <b>${s15.actions.length-1} entradas mapeadas</b> (incluindo as repetições presentes no documento)</p><p>Itens críticos: <b>3/3</b></p><p>Revisão, objetivo, referências, abrangência, definições, gestão de anomalias, registros e anexos: <b>incluídos</b>.</p></div>`;
+</script>
+</body>
+</html>
