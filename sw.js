@@ -1,14 +1,14 @@
-const CACHE='u39-area-fria-concept-v26-parada-refinada';
+const CACHE='u39-area-fria-concept-v27-e3909-shortcut';
 
 const SHELL=[
   './',
   './index.html',
-  './styles.css?v=26',
-  './app.js?v=26',
+  './styles.css?v=27',
+  './app.js?v=27',
   './manifest.json',
-  './equalizacao-j3902-e3907.html?v=26',
-  './parada-esgotamento-dea-u39.html?v=26',
-  './parada-u39-fo39143-ci3907.html?v=26',
+  './equalizacao-j3902-e3907.html?v=27',
+  './parada-esgotamento-dea-u39.html?v=27',
+  './parada-u39-fo39143-ci3907.html?v=27',
   './icons/icon-192.png',
   './icons/icon-512.png',
   './icons/icon-maskable-192.png',

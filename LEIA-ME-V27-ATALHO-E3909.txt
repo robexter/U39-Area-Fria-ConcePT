@@ -1,0 +1,14 @@
+U39 AREA FRIA CONCEPT — V27
+ATALHO SECUNDÁRIO: RETIRADA DA E-3909 PARA MANUTENÇÃO
+
+Base: V26 refinada.
+Alteração: adiciona apenas o atalho para o treinamento central hospedado no E-3909 Concept.
+
+Treinamento central:
+https://robexter.github.io/E-3909-concept/retirada-e3909-manutencao.html?v=2
+
+Para atualizar o repositório U39-Area-Fria-ConcePT:
+- substituir index.html
+- substituir sw.js
+
+O treinamento NÃO é duplicado no portal Área Fria; o cartão abre a versão central da E-3909.
