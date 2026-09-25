@@ -12,7 +12,167 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="U39 Area Fria Concept">
-  <link rel="stylesheet" href="./styles.css?v=27">
+  <link rel="stylesheet" href="./styles.css?v=28">
+
+  <style>
+    /* =========================================================
+       MANOBRAS INTEGRADAS — RESPONSIVIDADE MOBILE
+       Desktop preservado; no celular os cards passam a empilhar
+       conteúdo + botão, evitando quebra excessiva do texto.
+       ========================================================= */
+    #integratedManeuvers .integrated-maneuvers-list{
+      padding:0 18px 18px;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+
+    #integratedManeuvers .integrated-maneuver-card{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) auto;
+      gap:14px;
+      align-items:center;
+      padding:16px;
+      border-radius:16px;
+      box-sizing:border-box;
+      min-width:0;
+    }
+
+    #integratedManeuvers .integrated-maneuver-copy{
+      min-width:0;
+    }
+
+    #integratedManeuvers .integrated-maneuver-kicker{
+      font-size:11px;
+      font-weight:900;
+      letter-spacing:.08em;
+      line-height:1.35;
+      margin-bottom:5px;
+    }
+
+    #integratedManeuvers .integrated-maneuver-title{
+      display:block;
+      font-size:18px;
+      line-height:1.3;
+      overflow-wrap:break-word;
+      word-break:normal;
+    }
+
+    #integratedManeuvers .integrated-maneuver-desc{
+      margin:6px 0 0;
+      color:#9fb7c8;
+      line-height:1.45;
+      overflow-wrap:break-word;
+      word-break:normal;
+    }
+
+    #integratedManeuvers .integrated-maneuver-btn{
+      text-decoration:none;
+      white-space:nowrap;
+      justify-self:end;
+    }
+
+    #integratedManeuvers .maneuver-equalizacao{
+      border:1px solid #365a73;
+      background:linear-gradient(180deg,#0d2637,#091923);
+    }
+    #integratedManeuvers .maneuver-e3906{
+      border:1px solid #685b32;
+      background:linear-gradient(180deg,#252416,#111b21);
+    }
+    #integratedManeuvers .maneuver-e3909{
+      border:1px solid #6b5634;
+      background:linear-gradient(180deg,#261f13,#10191f);
+    }
+    #integratedManeuvers .maneuver-dea{
+      border:1px solid #536b44;
+      background:linear-gradient(180deg,#17281b,#0d1a16);
+    }
+    #integratedManeuvers .maneuver-parada{
+      border:1px solid #714b35;
+      background:linear-gradient(180deg,#2a1b14,#111921);
+    }
+
+    #integratedManeuvers .tone-yellow{ color:#ffd56b; }
+    #integratedManeuvers .tone-amber{ color:#ffd28a; }
+    #integratedManeuvers .tone-green{ color:#bce88f; }
+    #integratedManeuvers .tone-orange{ color:#ffc187; }
+
+    @media (max-width: 720px){
+      #integratedManeuvers{
+        overflow:hidden;
+      }
+
+      #integratedManeuvers .section-head{
+        gap:8px;
+      }
+
+      #integratedManeuvers .integrated-maneuvers-list{
+        padding:0 12px 14px;
+        gap:10px;
+      }
+
+      #integratedManeuvers .integrated-maneuver-card{
+        grid-template-columns:minmax(0,1fr);
+        gap:12px;
+        align-items:stretch;
+        width:100%;
+        max-width:100%;
+        padding:14px;
+      }
+
+      #integratedManeuvers .integrated-maneuver-kicker{
+        font-size:10px;
+        line-height:1.4;
+        letter-spacing:.06em;
+        overflow-wrap:anywhere;
+      }
+
+      #integratedManeuvers .integrated-maneuver-title{
+        font-size:17px;
+        line-height:1.28;
+      }
+
+      #integratedManeuvers .integrated-maneuver-desc{
+        font-size:14px;
+        line-height:1.5;
+      }
+
+      #integratedManeuvers .integrated-maneuver-btn{
+        width:100%;
+        max-width:100%;
+        box-sizing:border-box;
+        white-space:normal;
+        text-align:center;
+        justify-self:stretch;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        min-height:48px;
+        margin-top:2px;
+      }
+    }
+
+    @media (max-width: 420px){
+      #integratedManeuvers .integrated-maneuvers-list{
+        padding-left:10px;
+        padding-right:10px;
+      }
+
+      #integratedManeuvers .integrated-maneuver-card{
+        padding:13px;
+        border-radius:15px;
+      }
+
+      #integratedManeuvers .integrated-maneuver-title{
+        font-size:16px;
+      }
+
+      #integratedManeuvers .integrated-maneuver-desc{
+        font-size:13.5px;
+      }
+    }
+  </style>
 </head>
 <body>
   <section id="authView" class="view auth-shell hidden">
@@ -117,50 +277,51 @@
             <p>Treinamentos situacionais que envolvem mais de um equipamento da Área Fria.</p>
           </div>
         </div>
-        <div style="padding:0 18px 18px">
-          <div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center;padding:16px;border:1px solid #365a73;border-radius:16px;background:linear-gradient(180deg,#0d2637,#091923)">
-            <div>
-              <div style="font-size:11px;font-weight:900;letter-spacing:.08em;color:#ffd56b;margin-bottom:5px">MANOBRA INTEGRADA • J-3902 / E-3904 / E-3905 / E-3907 / FLARE</div>
-              <b style="font-size:18px">Equalização de Pressão J-3902 → E-3907 / Flare</b>
-              <p style="margin:6px 0 0;color:#9fb7c8;line-height:1.45">Estudo guiado, montagem do alinhamento, tendências das pressões, falhas e avaliação CIC.</p>
+
+        <div class="integrated-maneuvers-list">
+          <div class="integrated-maneuver-card maneuver-equalizacao">
+            <div class="integrated-maneuver-copy">
+              <div class="integrated-maneuver-kicker tone-yellow">MANOBRA INTEGRADA • J-3902 / E-3904 / E-3905 / E-3907 / FLARE</div>
+              <b class="integrated-maneuver-title">Equalização de Pressão J-3902 → E-3907 / Flare</b>
+              <p class="integrated-maneuver-desc">Estudo guiado, montagem do alinhamento, tendências das pressões, falhas e avaliação CIC.</p>
             </div>
-            <a class="btn primary" href="./equalizacao-j3902-e3907.html?v=27" style="text-decoration:none;white-space:nowrap">▶ Abrir treinamento</a>
+            <a class="btn primary integrated-maneuver-btn" href="./equalizacao-j3902-e3907.html?v=28">▶ Abrir treinamento</a>
           </div>
-          <div style="height:12px"></div>
-          <div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center;padding:16px;border:1px solid #685b32;border-radius:16px;background:linear-gradient(180deg,#252416,#111b21)">
-            <div>
-              <div style="font-size:11px;font-weight:900;letter-spacing:.08em;color:#ffd56b;margin-bottom:5px">🛠️ MANUTENÇÃO • E-3906 • ATALHO SECUNDÁRIO</div>
-              <b style="font-size:18px">Retirada da E-3906 de Operação para Manutenção</b>
-              <p style="margin:6px 0 0;color:#9fb7c8;line-height:1.45">Bypass → isolamento → drenagem → flare → purga → steam-out → medições → liberação.</p>
+
+          <div class="integrated-maneuver-card maneuver-e3906">
+            <div class="integrated-maneuver-copy">
+              <div class="integrated-maneuver-kicker tone-yellow">🛠️ MANUTENÇÃO • E-3906 • ATALHO SECUNDÁRIO</div>
+              <b class="integrated-maneuver-title">Retirada da E-3906 de Operação para Manutenção</b>
+              <p class="integrated-maneuver-desc">Bypass → isolamento → drenagem → flare → purga → steam-out → medições → liberação.</p>
             </div>
-            <a class="btn primary" href="https://robexter.github.io/E-3906-concept/retirada-e3906.html?v=4" target="_blank" rel="noopener" style="text-decoration:none;white-space:nowrap">🛠️ Abrir treinamento</a>
+            <a class="btn primary integrated-maneuver-btn" href="https://robexter.github.io/E-3906-concept/retirada-e3906.html?v=4" target="_blank" rel="noopener">🛠️ Abrir treinamento</a>
           </div>
-          <div style="height:12px"></div>
-          <div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center;padding:16px;border:1px solid #6b5634;border-radius:16px;background:linear-gradient(180deg,#261f13,#10191f)">
-            <div>
-              <div style="font-size:11px;font-weight:900;letter-spacing:.08em;color:#ffd28a;margin-bottom:5px">🛠️ MANUTENÇÃO • E-3909 • ATALHO SECUNDÁRIO</div>
-              <b style="font-size:18px">Retirada de Operação da E-3909 para Manutenção</b>
-              <p style="margin:6px 0 0;color:#9fb7c8;line-height:1.45">19 etapas • inventário • bypass • pressão • flare • instrumentação • purga • atmosfera • 24 h • RAS.</p>
+
+          <div class="integrated-maneuver-card maneuver-e3909">
+            <div class="integrated-maneuver-copy">
+              <div class="integrated-maneuver-kicker tone-amber">🛠️ MANUTENÇÃO • E-3909 • ATALHO SECUNDÁRIO</div>
+              <b class="integrated-maneuver-title">Retirada de Operação da E-3909 para Manutenção</b>
+              <p class="integrated-maneuver-desc">19 etapas • inventário • bypass • pressão • flare • instrumentação • purga • atmosfera • 24 h • RAS.</p>
             </div>
-            <a class="btn primary" href="https://robexter.github.io/E-3909-concept/retirada-e3909-manutencao.html?v=2" target="_blank" rel="noopener" style="text-decoration:none;white-space:nowrap">🛠️ Abrir treinamento</a>
+            <a class="btn primary integrated-maneuver-btn" href="https://robexter.github.io/E-3909-concept/retirada-e3909-manutencao.html?v=2" target="_blank" rel="noopener">🛠️ Abrir treinamento</a>
           </div>
-          <div style="height:12px"></div>
-          <div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center;padding:16px;border:1px solid #536b44;border-radius:16px;background:linear-gradient(180deg,#17281b,#0d1a16)">
-            <div>
-              <div style="font-size:11px;font-weight:900;letter-spacing:.08em;color:#bce88f;margin-bottom:5px">🧪 MANOBRA INTEGRADA • TRATAMENTO DEA • E-3911 / E-3912 / E-3913</div>
-              <b style="font-size:18px">Parada e Esgotamento do Tratamento DEA da U-39 • 100%</b>
-              <p style="margin:6px 0 0;color:#9fb7c8;line-height:1.45">15/15 etapas: regeneração, flare, drenagens, lavagem/V12, raqueteamento, segurança, registros e liberação.</p>
+
+          <div class="integrated-maneuver-card maneuver-dea">
+            <div class="integrated-maneuver-copy">
+              <div class="integrated-maneuver-kicker tone-green">🧪 MANOBRA INTEGRADA • TRATAMENTO DEA • E-3911 / E-3912 / E-3913</div>
+              <b class="integrated-maneuver-title">Parada e Esgotamento do Tratamento DEA da U-39 • 100%</b>
+              <p class="integrated-maneuver-desc">15/15 etapas: regeneração, flare, drenagens, lavagem/V12, raqueteamento, segurança, registros e liberação.</p>
             </div>
-            <a class="btn primary" href="./parada-esgotamento-dea-u39.html?v=27" style="text-decoration:none;white-space:nowrap">🧪 Treinar manobra</a>
+            <a class="btn primary integrated-maneuver-btn" href="./parada-esgotamento-dea-u39.html?v=28">🧪 Treinar manobra</a>
           </div>
-          <div style="height:12px"></div>
-          <div style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center;padding:16px;border:1px solid #714b35;border-radius:16px;background:linear-gradient(180deg,#2a1b14,#111921)">
-            <div>
-              <div style="font-size:11px;font-weight:900;letter-spacing:.08em;color:#ffc187;margin-bottom:5px">🛑 PARADA TOTAL • U-39 • FO-39143 / CI-3907</div>
-              <b style="font-size:18px">Parada da U-39 para Reparo • Treinamento CIC</b>
-              <p style="margin:6px 0 0;color:#9fb7c8;line-height:1.45">V26 refinada • 7 macrofases • decisão + confirmação • 22 etapas preservadas.</p>
+
+          <div class="integrated-maneuver-card maneuver-parada">
+            <div class="integrated-maneuver-copy">
+              <div class="integrated-maneuver-kicker tone-orange">🛑 PARADA TOTAL • U-39 • FO-39143 / CI-3907</div>
+              <b class="integrated-maneuver-title">Parada da U-39 para Reparo • Treinamento CIC</b>
+              <p class="integrated-maneuver-desc">V26 refinada • 7 macrofases • decisão + confirmação • 22 etapas preservadas.</p>
             </div>
-            <a class="btn primary" href="./parada-u39-fo39143-ci3907.html?v=27" style="text-decoration:none;white-space:nowrap">🛑 Treinar parada</a>
+            <a class="btn primary integrated-maneuver-btn" href="./parada-u39-fo39143-ci3907.html?v=28">🛑 Treinar parada</a>
           </div>
         </div>
       </section>
@@ -241,7 +402,7 @@
 
   <script>
   (async function () {
-    const BUILD = '27';
+    const BUILD = '28';
     const BUILD_KEY = 'u39-area-fria-build';
 
     if (localStorage.getItem(BUILD_KEY) !== BUILD) {
@@ -269,12 +430,12 @@
 
     const appScript = document.createElement('script');
     appScript.type = 'module';
-    appScript.src = './app.js?v=27';
+    appScript.src = './app.js?v=28';
     document.body.appendChild(appScript);
 
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js?v=27').catch(console.warn);
+        navigator.serviceWorker.register('./sw.js?v=28').catch(console.warn);
       });
     }
   })();
