@@ -1,0 +1,28 @@
+PATCH — U39 ÁREA FRIA CONCEPT V28
+Integração da Lavagem da Turbina J-3902
+
+Situação confirmada:
+- Lavagem-J3902-CIC-V2-Refinada.html já existe na raiz do repositório.
+- O index.html V27 ainda não possui o card da lavagem.
+- Este patch altera somente o service worker para inserir o card visual na seção Manobras Integradas.
+
+PASSO A PASSO
+1. No repositório robexter/U39-Area-Fria-ConcePT, abra sw.js.
+2. Substitua todo o conteúdo pelo sw.js deste pacote.
+3. Salve/commit.
+4. Abra:
+   https://robexter.github.io/U39-Area-Fria-ConcePT/?v=28
+5. Atualize a página.
+6. Se ainda aparecer a versão antiga, feche o PWA/navegador, abra novamente e atualize uma segunda vez.
+
+O card aparece logo após:
+Equalização de Pressão J-3902 → E-3907 / Flare
+
+NOVO CARD
+🧼 Lavagem da Turbina J-3902 • CIC
+
+Link:
+./Lavagem-J3902-CIC-V2-Refinada.html?v=28
+
+Observação:
+A solução ideal definitiva é inserir o card diretamente no index.html em uma próxima atualização integral do portal.
