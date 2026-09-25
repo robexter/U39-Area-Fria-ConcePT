@@ -1,0 +1,29 @@
+CORREÇÃO V29 — LAVAGEM J-3902
+
+Problemas corrigidos:
+1. O card estava sendo inserido acima/fora da lista de Manobras Integradas.
+2. O card usava estrutura própria e não herdava a responsividade mobile dos demais cards.
+
+Nova lógica:
+- O card é inserido imediatamente DEPOIS do card:
+  Equalização de Pressão J-3902 → E-3907 / Flare
+- Ele permanece dentro de:
+  <div class="integrated-maneuvers-list">
+- Usa as mesmas classes dos demais cards:
+  integrated-maneuver-card
+  integrated-maneuver-copy
+  integrated-maneuver-kicker
+  integrated-maneuver-title
+  integrated-maneuver-desc
+  integrated-maneuver-btn
+- Portanto, abaixo de 720 px, texto e botão empilham igual aos demais cards.
+
+COMO APLICAR AGORA
+1. Substituir somente sw.js no repositório U39-Area-Fria-ConcePT.
+2. Salvar/commit.
+3. Abrir:
+   https://robexter.github.io/U39-Area-Fria-ConcePT/?v=29
+4. Atualizar duas vezes se o PWA ainda estiver com Service Worker anterior.
+
+O arquivo CARD-J3902-PARA-INDEX.html também está incluído para futura integração
+definitiva diretamente no index.html, eliminando dependência de injeção do SW.
