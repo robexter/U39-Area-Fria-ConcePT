@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Área Fria Concept — Remover Sequência de Treinamento</title>
+<style>
+:root{color-scheme:dark;--bg:#07111a;--surface:#0d2030;--line:#35566d;--primary:#93ddff;--muted:#a9c0d1;--good:#9ce8b2}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 90% 5%,#17435b,#07111a 57%);color:#f1faff;font:16px/1.5 system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+main{width:min(900px,calc(100% - 28px));margin:36px auto 60px}header{margin-bottom:24px}.kicker{letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--primary);font-size:12px}
+h1{font-size:clamp(27px,4.5vw,41px);line-height:1.12;margin:12px 0}.lead{max-width:690px;color:#c7d8e3}.card{background:#102536ed;border:1px solid var(--line);border-radius:18px;padding:20px;margin-top:18px}
+header .chip{display:inline-block;border:1px solid #436b82;border-radius:100px;padding:6px 12px;color:#e0f7ff;font-size:12px;font-weight:700}
+ol{padding-left:22px}li{margin:8px 0}code{background:#07141e;padding:2px 6px;border-radius:5px;color:#c7ebff}button{background:linear-gradient(110deg,#4ab6e4,#7ae1bf);color:#042031;font:800 15px system-ui;border:0;border-radius:12px;padding:15px 18px;cursor:pointer;width:100%;min-height:49px}button:disabled{opacity:.6;cursor:wait}
+.small{font-size:13px;color:var(--muted)}.ok{color:var(--good)}.warning{border-left:3px solid #f2ce8a;padding-left:12px;color:#ffdfac}details{margin-top:16px}summary{cursor:pointer;font-weight:700}label{display:block;font-size:14px;margin:12px 0 5px}input[type=file]{width:100%;background:#091923;border:1px solid var(--line);border-radius:10px;padding:10px;max-width:100%;font-size:13px}
+#status{white-space:pre-wrap;margin-top:12px;font-size:14px;min-height:25px;color:#d5edf9}a{color:var(--primary);text-underline-offset:3px}.rule{border-top:1px solid #31516c;margin-top:18px;padding-top:12px}
+</style>
+</head><body><main>
+<header><span class="chip">U-39 • Área Fria Concept</span><div class="kicker" style="margin-top:20px">Ajuste visual do portal central</div><h1>Remover “Sequência de Treinamento”</h1><p class="lead">Gere um pacote seguro, sem precisar editar código. O preparador busca a versão atual de <strong>index.html</strong> e <strong>app.js</strong> e retira exclusivamente a lista visual redundante e a lógica que a preenchia.</p></header>
+<section class="card"><h2 style="margin-top:0">Gerar pacote pronto para o GitHub</h2>
+<p>O ZIP resultante terá <strong>somente dois arquivos</strong>: <code>index.html</code> e <code>app.js</code>. Não inclui <code>sw.js</code> nem altera os 11 repositórios dos equipamentos.</p>
+<button id="go" type="button">Gerar ZIP corrigido da Área Fria</button><div id="status" role="status" aria-live="polite"></div>
+<details><summary>Se a internet bloquear a leitura automática, escolher os arquivos locais</summary>
+<p class="small">Baixe os arquivos originais de <a href="https://github.com/robexter/U39-Area-Fria-ConcePT/blob/main/index.html" target="_blank" rel="noopener">index.html</a> e <a href="https://github.com/robexter/U39-Area-Fria-ConcePT/blob/main/app.js" target="_blank" rel="noopener">app.js</a> usando o GitHub e selecione-os abaixo.</p>
+<label for="indexFile">Arquivo original index.html</label><input type="file" id="indexFile" accept=".html,text/html">
+<label for="appFile">Arquivo original app.js</label><input type="file" id="appFile" accept=".js,text/javascript">
+</details></section>
+<section class="card"><h2 style="margin-top:0">Publicar em 4 passos</h2><ol>
+<li>Abra o ZIP gerado e extraia <code>index.html</code> e <code>app.js</code>.</li>
+<li>Abra o <a href="https://github.com/robexter/U39-Area-Fria-ConcePT" target="_blank" rel="noopener">repositório central U39-Area-Fria-ConcePT</a>.</li>
+<li>Clique em <strong>Add file → Upload files</strong> e envie <strong>somente esses dois arquivos</strong> à raiz do repositório. Confirme a substituição e faça o commit.</li>
+<li>Abra <a href="https://robexter.github.io/U39-Area-Fria-ConcePT/" target="_blank" rel="noopener">Área Fria Concept</a>. Atualize a página para visualizar o portal sem a sequência.</li>
+</ol><p class="warning"><strong>Não envie o arquivo ABRIR-PREPARADOR.html ao GitHub.</strong> Use apenas os dois arquivos gerados. O histórico anterior permanece no próprio GitHub, permitindo reverter.</p></section>
+<section class="card"><h2 style="margin-top:0">O que fica preservado</h2><p class="ok">✓ Todos os 11 cards e busca • ✓ “Continuar de onde parei” • ✓ Favoritos e progresso • ✓ Anterior/Próximo • ✓ Login e painel administrativo • ✓ Manobras e lavagem J-3902 V3.1 • ✓ Laboratórios V5 nos respectivos repositórios.</p><p class="small">Correção de apresentação somente. Nenhuma lógica operacional é modificada. O preparador interrompe a geração se encontrar uma estrutura inesperada, para evitar apagar conteúdo indevido.</p></section>
+</main>
+<script>
+(()=>{'use strict';
+const $=id=>document.getElementById(id), repo='robexter/U39-Area-Fria-ConcePT';
+const say=(s,error=false)=>{const e=$('status');e.textContent=s;e.style.color=error?'#ffafaa':'#d5edf9';};
+async function retrieve(path,input){if(input.files.length) return input.files[0].text();
+ const urls=[`https://raw.githubusercontent.com/${repo}/main/${path}?t=${Date.now()}`,`https://api.github.com/repos/${repo}/contents/${path}`];
+ let errors=[];for(const url of urls){try{const r=await fetch(url,{cache:'no-store'});if(!r.ok)throw Error(`HTTP ${r.status}`);if(url.includes('api.github.com')){const j=await r.json();const bytes=Uint8Array.from(atob(j.content.replace(/\s/g,'')),c=>c.charCodeAt(0));return new TextDecoder('utf-8').decode(bytes);}return await r.text();}catch(e){errors.push(String(e));}}
+ throw Error(`Não consegui ler ${path} automaticamente. Abra a opção de arquivos locais, selecione ${path} e tente novamente. ${errors.join(' | ')}`);
+}
+function patch(index,app){
+const exactSection=/[ \t]*<section class="panel">\s*<div class="section-head"><div><h3>Sequência de treinamento<\/h3><p>Fluxo sugerido para navegar por todos os módulos\.<\/p><\/div><\/div>\s*<div id="processFlow" class="process-flow"><\/div>\s*<\/section>\s*/g;
+const matches=[...index.matchAll(exactSection)];if(matches.length!==1)throw Error(`Esperava encontrar a seção exatamente uma vez, mas encontrei ${matches.length}. Nenhum arquivo foi alterado.`);
+const originally=index;index=index.replace(exactSection,'\n\n');
+const builds=[...index.matchAll(/const BUILD\s*=\s*'([^']+)'\s*;/g)];if(builds.length!==1)throw Error('Identificador BUILD inesperado: atualização cancelada.');
+index=index.replace(builds[0][0],"const BUILD = '32-sequencia-removida'");
+const scripts=[...index.matchAll(/appScript\.src\s*=\s*['"]\.\/app\.js\?v=[^'"]+['"]\s*;/g)];if(scripts.length!==1)throw Error('Referência app.js inesperada: atualização cancelada.');
+index=index.replace(scripts[0][0],"appScript.src = './app.js?v=32-sequencia-removida';");
+const invocations=app.match(/^\s*renderFlow\(\);[ \t]*\r?\n/gm)||[];
+if(invocations.length!==3)throw Error(`Esperava 3 chamadas à seção redundante, encontrei ${invocations.length}: atualização cancelada.`);
+app=app.replace(/^\s*renderFlow\(\);[ \t]*\r?\n/gm,'\n');
+const start=app.indexOf('function renderFlow(){'); const finish=app.indexOf('\nfunction updateProgressUI(){',start);
+if(start<0||finish<start)throw Error('Bloco JS inesperado: atualização cancelada.');
+app=app.slice(0,start)+app.slice(finish+1);
+if(app.includes('renderFlow(')||app.includes('processFlow')||index.includes('id="processFlow"')||!index.includes('id="moduleGrid"')||!index.includes('id="continueBtn"')||!index.includes('Lavagem-J-3902-Concept-Interativo.html'))throw Error('Validação de preservação falhou. Nenhum ZIP será gerado.');
+if(app.length>=originally.length*10)throw Error('Falha de validação: saída inválida.');
+return{index,app};
+}
+const encoder=new TextEncoder();
+function crc32(bytes){let crc=0xFFFFFFFF;for(const b of bytes){crc^=b;for(let k=0;k<8;k++)crc=(crc>>>1)^(0xEDB88320&(-(crc&1)));}return(crc^0xFFFFFFFF)>>>0;}
+function zip(files){const locals=[],centrals=[];let offset=0;const chunks=[];
+for(const [name,text] of Object.entries(files)){
+ const n=encoder.encode(name),d=encoder.encode(text),c=crc32(d);
+ const lh=new Uint8Array(30+n.length),l=new DataView(lh.buffer);l.setUint32(0,0x04034b50,true);l.setUint16(4,20,true);l.setUint16(6,0x800,true);l.setUint16(8,0,true);l.setUint32(14,c,true);l.setUint32(18,d.length,true);l.setUint32(22,d.length,true);l.setUint16(26,n.length,true);lh.set(n,30);
+ chunks.push(lh,d);
+ const ch=new Uint8Array(46+n.length),v=new DataView(ch.buffer);v.setUint32(0,0x02014b50,true);v.setUint16(4,20,true);v.setUint16(6,20,true);v.setUint16(8,0x800,true);v.setUint32(16,c,true);v.setUint32(20,d.length,true);v.setUint32(24,d.length,true);v.setUint16(28,n.length,true);v.setUint32(42,offset,true);ch.set(n,46);centrals.push(ch);offset+=lh.length+d.length;
+}
+const centralLen=centrals.reduce((a,b)=>a+b.length,0);chunks.push(...centrals);
+const end=new Uint8Array(22),e=new DataView(end.buffer);e.setUint32(0,0x06054b50,true);e.setUint16(8,centrals.length,true);e.setUint16(10,centrals.length,true);e.setUint32(12,centralLen,true);e.setUint32(16,offset,true);chunks.push(end);
+return new Blob(chunks,{type:'application/zip'});
+}
+$('go').addEventListener('click',async()=>{const btn=$('go');btn.disabled=true;say('Lendo os arquivos atuais do repositório...');try{const [index,app]=await Promise.all([retrieve('index.html',$('indexFile')),retrieve('app.js',$('appFile'))]);say('Verificando a seção e preservando as funcionalidades...');const modified=patch(index,app);const blob=zip({'index.html':modified.index,'app.js':modified.app});const u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download='Area-Fria-Sem-Sequencia-2-Arquivos.zip';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),30000);
+say('✓ ZIP gerado com sucesso.\n✓ Seção visual removida.\n✓ Três chamadas JS e rotina obsoleta removidas.\n✓ Cards, progresso, continuar, manobras e lavagem J-3902 preservados.\n✓ Cache renovado pelo identificador BUILD (sem modificar sw.js).\n\nAgora envie index.html e app.js à raiz do repositório central.');}catch(e){say('Atenção: '+e.message,true);}finally{btn.disabled=false;}});
+})();
+</script>
+</body></html>

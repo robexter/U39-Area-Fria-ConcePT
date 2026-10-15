@@ -1,0 +1,27 @@
+AREA FRIA CONCEPT — REMOVER SEQUENCIA DE TREINAMENTO
+
+1. Extraia este ZIP para uma pasta do Windows.
+2. Abra ABRIR-PREPARADOR.html no Chrome ou Edge.
+3. Clique em GERAR ZIP CORRIGIDO DA AREA FRIA.
+4. Extraia o ZIP que foi criado automaticamente. Ele contem somente:
+   - index.html
+   - app.js
+5. Entre em https://github.com/robexter/U39-Area-Fria-ConcePT
+6. Clique Add file > Upload files e envie apenas index.html e app.js
+   PARA A RAIZ do repositorio. Confirme a substituicao e o commit.
+7. Reabra https://robexter.github.io/U39-Area-Fria-ConcePT/
+
+Nao envie este preparador ao GitHub.
+Nao envie sw.js: ele nao precisa ser alterado nesta atualizacao.
+Nao envie arquivos para os 11 repositorios individuais.
+
+O que muda: desaparece a secao duplicada Sequencia de treinamento.
+O que permanece: cards, busca, favoritos, progresso, Continuar de onde parei,
+Anterior/Proximo, controle de acesso, manobras e lavagem J-3902 V3.1.
+
+Se houver falha de internet na leitura automatica, use a opcao de arquivos
+locais dentro do preparador e selecione os originais index.html/app.js.
+
+O GitHub preserva as versoes anteriores no historico de commits.
+
+Observacao: atualizacao ainda nao publicada; precisa enviar os dois arquivos.
