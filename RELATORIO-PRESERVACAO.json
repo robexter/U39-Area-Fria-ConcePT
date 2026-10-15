@@ -1,0 +1,134 @@
+[
+  {
+    "module": "E-3904-05-Concept",
+    "V4_original_sha256": "0344c0b709e23c8e2e9d1716d8170c90ee20a5e6af932d402c48d338077cd53a",
+    "V5_combined_sha256": "7879fc9afce412ee0c4711cc149a8d44b01d5730f94cfc634baa958f9c09c62e",
+    "preserved_V4_as_exact_prefix": true,
+    "bytes_added": 27195,
+    "files": [
+      "conteudo-integral.js",
+      "laboratorio-concept.js",
+      "COMO-PUBLICAR.txt"
+    ]
+  },
+  {
+    "module": "E-3906-concept",
+    "V4_original_sha256": "6d5636189e4dc7c503e8dfb2296ca3de4fcc7bb302567cca316c5c74c6b62b49",
+    "V5_combined_sha256": "071d30153101c12051f591e23e25e5845e5bf06cf28b57de85f8eb1ec9eccd42",
+    "preserved_V4_as_exact_prefix": true,
+    "bytes_added": 27103,
+    "files": [
+      "conteudo-integral.js",
+      "laboratorio-concept.js",
+      "COMO-PUBLICAR.txt"
+    ]
+  },
+  {
+    "module": "E-3907-concept",
+    "V4_original_sha256": "d40646f04cda4cb6333f6ce33f9fcbcbd19d03be22ff7ee448765af5b104dd16",
+    "V5_combined_sha256": "b7961682b9ac8628ac8853429f4dd798a3306d844758c78b6a02b37c98477232",
+    "preserved_V4_as_exact_prefix": true,
+    "bytes_added": 26867,
+    "files": [
+      "conteudo-integral.js",
+      "laboratorio-concept.js",
+      "COMO-PUBLICAR.txt"
+    ]
+  },
+  {
+    "module": "E-3908-concept",
+    "V4_original_sha256": "38f3429cd948b7c595ef615d87f13581e7d7dbc6fcde85371df84bf58e9f461b",
+    "V5_combined_sha256": "262dfb0f32e275a0dfa7b42f5fbbea614611b7af8edff0b61a6bcd63567c9324",
+    "preserved_V4_as_exact_prefix": true,
+    "bytes_added": 26751,
+    "files": [
+      "conteudo-integral.js",
+      "laboratorio-concept.js",
+      "COMO-PUBLICAR.txt"
+    ]
+  },
+  {
+    "module": "E-3909-concept",
+    "V4_original_sha256": "7d3e9314939a4954776a17fe69aba266f62f1e30637bfa2dcb9028db214c542e",
+    "V5_combined_sha256": "fdb669e8be0325edbb07f76d8693e38e639a65e8e278dea7a928f7731fab2356",
+    "preserved_V4_as_exact_prefix": true,
+    "bytes_added": 26694,
+    "files": [
+      "conteudo-integral.js",
+      "laboratorio-concept.js",
+      "COMO-PUBLICAR.txt"
+    ]
+  },
+  {
+    "module": "E-3910-concept",
+    "V4_original_sha256": "0b0ef5ebc9cfb06ee9af56804fc56aa417c951dbab2491b264bddd91fd6096f5",
+    "V5_combined_sha256": "a913abf7b1966b62fb894b3e5f4fb017b812fb01d2727236afd7631cf65d4da6",
+    "preserved_V4_as_exact_prefix": true,
+    "bytes_added": 26708,
+    "files": [
+      "conteudo-integral.js",
+      "laboratorio-concept.js",
+      "COMO-PUBLICAR.txt"
+    ]
+  },
+  {
+    "module": "E-3911-concept",
+    "V4_original_sha256": "276a44f84339027e484452b2545c0907337f1dbbf3b073f693bf6e26688abeab",
+    "V5_combined_sha256": "95fda9722e80727b1943af70ce68a405c3d6fed235d89613fac931ee37f81cc6",
+    "preserved_V4_as_exact_prefix": true,
+    "bytes_added": 26719,
+    "files": [
+      "conteudo-integral.js",
+      "laboratorio-concept.js",
+      "COMO-PUBLICAR.txt"
+    ]
+  },
+  {
+    "module": "E-3912-concept",
+    "V4_original_sha256": "b413ab6c0105629e32dc1a08684d787e69e6c089840fda60f832bed37762d043",
+    "V5_combined_sha256": "79c11ffaa509d22eb9fa66f0e8225f92d6e2e3f90fe191bc32abf627e3023456",
+    "preserved_V4_as_exact_prefix": true,
+    "bytes_added": 26601,
+    "files": [
+      "conteudo-integral.js",
+      "laboratorio-concept.js",
+      "COMO-PUBLICAR.txt"
+    ]
+  },
+  {
+    "module": "E-3913-concept",
+    "V4_original_sha256": "758ce998deed96afd80b41e91927cc9418ef773425404aef8e8448e7a51084a3",
+    "V5_combined_sha256": "a4b34ead860b8a35b57d7096a5a45fd6da1788ec4fcfa2c37b7061729f9c3bb6",
+    "preserved_V4_as_exact_prefix": true,
+    "bytes_added": 26551,
+    "files": [
+      "conteudo-integral.js",
+      "laboratorio-concept.js",
+      "COMO-PUBLICAR.txt"
+    ]
+  },
+  {
+    "module": "E-3914-Concept",
+    "V4_original_sha256": "6b48124fe80c8ad739fa90c7a5758979ad697d50f152b1d5f937a5ff2714ece6",
+    "V5_combined_sha256": "6fa55a03e16bad9b79045ae63346b450b6c2fdead03f89365292208eb2dcc5ba",
+    "preserved_V4_as_exact_prefix": true,
+    "bytes_added": 26599,
+    "files": [
+      "conteudo-integral.js",
+      "laboratorio-concept.js",
+      "COMO-PUBLICAR.txt"
+    ]
+  },
+  {
+    "module": "Merox-Gasolina",
+    "V4_original_sha256": "5619a63dbcb7a2bb646ad4ff54ac728f92ce3c0c99897e950af2ad36e2226888",
+    "V5_combined_sha256": "83716cfaa5396b5552b10953b02a1d1bde45233ccfcb6723b7f262874592df0c",
+    "preserved_V4_as_exact_prefix": true,
+    "bytes_added": 26632,
+    "files": [
+      "conteudo-integral.js",
+      "laboratorio-concept.js",
+      "COMO-PUBLICAR.txt"
+    ]
+  }
+]

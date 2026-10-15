@@ -1,0 +1,16 @@
+CONCEPT V5 — E-3912 — Extratora H₂S do GLP
+
+OPÇÃO MAIS SIMPLES / RECOMENDADA:
+1. No repositório E-3912-concept envie apenas conteudo-integral.js da V5.
+2. Garanta no index.html, imediatamente antes de </body>:
+   <script defer src="./conteudo-integral.js?v=5"></script>
+3. Se já houver tag com ?v=4, altere SOMENTE para ?v=5.
+4. Não remova/desative scripts, conteúdo ou imagens originais.
+5. Feche/reabra o app para atualizar o service worker, se preciso.
+
+O arquivo V5 inclui a V4 integral inalterada + Laboratório Concept V5. Não inclua laboratorio-concept.js adicionalmente se usar o arquivo combinado (isso duplicaria recursos).
+
+OPÇÃO ALTERNATIVA, SOMENTE SE VOCÊ JÁ USA V4:
+Mantenha conteudo-integral.js V4 e acrescente <script defer src="./laboratorio-concept.js?v=5"></script>.
+
+São índices didáticos sintéticos não calibrados: não usar como limites/ações reais de processo.
