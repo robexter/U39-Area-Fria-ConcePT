@@ -1,0 +1,13 @@
+AREA FRIA CONCEPT — J-3902 • V3.1
+Repositorio: https://github.com/robexter/U39-Area-Fria-ConcePT
+
+ARQUIVOS PARA UPLOAD NA RAIZ (os nomes devem ser mantidos):
+1. index.html — atualizar o atual, mantendo todos os demais cards;
+2. sw.js — atualizar cache e desligar injeção de atalho antigo V2;
+3. Lavagem-J-3902-Concept-Interativo.html — novo treinamento integral responsivo.
+
+GitHub: Add file > Upload files > selecione os 3 arquivos > Commit changes.
+Este index.html foi preparado a partir da versão atual conferida no GitHub (SHA 06086c...).
+Se você modificar o index.html do repositório antes de enviar, não o substitua por uma versão mais antiga; peça nova atualização.
+Não excluir arquivos V2, app.js, styles.css, manifest.json e icons.
+URL depois da publicação: https://robexter.github.io/U39-Area-Fria-ConcePT/Lavagem-J-3902-Concept-Interativo.html?v=31

@@ -12,7 +12,7 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="U39 Area Fria Concept">
-  <link rel="stylesheet" href="./styles.css?v=28">
+  <link rel="stylesheet" href="./styles.css?v=31">
 
   <style>
     /* =========================================================
@@ -288,6 +288,15 @@
             <a class="btn primary integrated-maneuver-btn" href="./equalizacao-j3902-e3907.html?v=28">▶ Abrir treinamento</a>
           </div>
 
+          <div id="lavagem-j3902-card" class="integrated-maneuver-card" style="border:1px solid #3c7087;background:linear-gradient(180deg,#0d2938,#081722)">
+            <div class="integrated-maneuver-copy">
+              <div class="integrated-maneuver-kicker tone-green">🧼 LAVAGEM DE TURBINA • J-3902 • CONTEÚDO INTEGRAL V3.1</div>
+              <b class="integrated-maneuver-title">Lavagem da Turbina J-3902 • CIC</b>
+              <p class="integrated-maneuver-desc">Estudo integral da lavagem com HBF: pressão da primeira roda, termodinâmica, palhetamento, simulações interativas, avaliação CIC e versão mobile corrigida.</p>
+            </div>
+            <a class="btn primary integrated-maneuver-btn" href="./Lavagem-J-3902-Concept-Interativo.html?v=31">🧼 Treinar lavagem V3.1</a>
+          </div>
+
           <div class="integrated-maneuver-card maneuver-e3906">
             <div class="integrated-maneuver-copy">
               <div class="integrated-maneuver-kicker tone-yellow">🛠️ MANUTENÇÃO • E-3906 • ATALHO SECUNDÁRIO</div>
@@ -402,7 +411,7 @@
 
   <script>
   (async function () {
-    const BUILD = '28';
+    const BUILD = '31-lavagem';
     const BUILD_KEY = 'u39-area-fria-build';
 
     if (localStorage.getItem(BUILD_KEY) !== BUILD) {
@@ -411,12 +420,12 @@
       try {
         if ('serviceWorker' in navigator) {
           const regs = await navigator.serviceWorker.getRegistrations();
-          await Promise.all(regs.map(r => r.unregister()));
+          await Promise.all(regs.filter(r => new URL(r.scope).pathname.startsWith('/U39-Area-Fria-ConcePT/')).map(r => r.unregister()));
         }
 
         if ('caches' in window) {
           const keys = await caches.keys();
-          await Promise.all(keys.map(k => caches.delete(k)));
+          await Promise.all(keys.filter(k => k.startsWith('u39-area-fria-concept-')).map(k => caches.delete(k)));
         }
       } catch (e) {
         console.warn('Limpeza de cache:', e);
@@ -430,12 +439,12 @@
 
     const appScript = document.createElement('script');
     appScript.type = 'module';
-    appScript.src = './app.js?v=28';
+    appScript.src = './app.js?v=31';
     document.body.appendChild(appScript);
 
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js?v=28').catch(console.warn);
+        navigator.serviceWorker.register('./sw.js?v=31').catch(console.warn);
       });
     }
   })();
